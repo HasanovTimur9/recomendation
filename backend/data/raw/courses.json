@@ -1,13 +1,108 @@
 [
     {
         "id": 1,
+        "name": "Databases for Beginner",
+        "difficulty": "beginner",
+        "tags": [
+            "databases",
+            "sql"
+        ]
+    },
+    {
+        "id": 2,
+        "name": "Python for Beginner",
+        "difficulty": "beginner",
+        "tags": [
+            "python",
+            "sql",
+            "javascript"
+        ]
+    },
+    {
+        "id": 3,
+        "name": "Python for Beginner",
+        "difficulty": "beginner",
+        "tags": [
+            "python",
+            "javascript"
+        ]
+    },
+    {
+        "id": 4,
+        "name": "Data Science for Advanced",
         "difficulty": "advanced",
         "tags": [
             "python"
         ]
     },
     {
-        "id": 2,
+        "id": 5,
+        "name": "Devops for Intermediate",
+        "difficulty": "intermediate",
+        "tags": [
+            "devops",
+            "cloud-computing",
+            "databases"
+        ]
+    },
+    {
+        "id": 6,
+        "name": "Data Science for Beginner",
+        "difficulty": "beginner",
+        "tags": [
+            "data-science",
+            "machine-learning"
+        ]
+    },
+    {
+        "id": 7,
+        "name": "Frontend for Intermediate",
+        "difficulty": "intermediate",
+        "tags": [
+            "css"
+        ]
+    },
+    {
+        "id": 8,
+        "name": "Python for Advanced",
+        "difficulty": "advanced",
+        "tags": [
+            "python",
+            "sql",
+            "javascript"
+        ]
+    },
+    {
+        "id": 9,
+        "name": "Devops for Intermediate",
+        "difficulty": "intermediate",
+        "tags": [
+            "devops"
+        ]
+    },
+    {
+        "id": 10,
+        "name": "Devops for Advanced",
+        "difficulty": "advanced",
+        "tags": [
+            "cloud-computing",
+            "devops",
+            "css"
+        ]
+    },
+    {
+        "id": 11,
+        "name": "Data Science for Advanced",
+        "difficulty": "advanced",
+        "tags": [
+            "python",
+            "data-science",
+            "machine-learning"
+        ]
+    },
+    {
+        "id": 12,
+        "name": "Databases for Intermediate",
         "difficulty": "intermediate",
         "tags": [
             "databases",
@@ -15,73 +110,27 @@
         ]
     },
     {
-        "id": 3,
+        "id": 13,
+        "name": "Databases for Intermediate",
         "difficulty": "intermediate",
         "tags": [
-            "game-development"
+            "sql",
+            "databases",
+            "css"
         ]
     },
     {
-        "id": 4,
-        "difficulty": "beginner",
-        "tags": [
-            "devops",
-            "cloud-computing",
-            "python"
-        ]
-    },
-    {
-        "id": 5,
-        "difficulty": "intermediate",
-        "tags": [
-            "cloud-computing",
-            "devops",
-            "game-development"
-        ]
-    },
-    {
-        "id": 6,
-        "difficulty": "intermediate",
-        "tags": [
-            "web-development"
-        ]
-    },
-    {
-        "id": 7,
-        "difficulty": "intermediate",
-        "tags": [
-            "cloud-computing",
-            "devops",
-            "python"
-        ]
-    },
-    {
-        "id": 8,
-        "difficulty": "beginner",
-        "tags": [
-            "sql"
-        ]
-    },
-    {
-        "id": 9,
+        "id": 14,
+        "name": "Cybersecurity for Advanced",
         "difficulty": "advanced",
         "tags": [
-            "frontend",
-            "html"
+            "game-development"
         ]
     },
     {
-        "id": 10,
+        "id": 15,
+        "name": "Cybersecurity for Beginner",
         "difficulty": "beginner",
-        "tags": [
-            "cloud-computing",
-            "devops",
-            "data-science"
-        ]
-    },
-    {
-        "id": 11,
-        "difficulty": "intermediate",
         "tags": [
             "game-development",
             "cybersecurity",
@@ -89,124 +138,217 @@
         ]
     },
     {
-        "id": 12,
-        "difficulty": "beginner",
-        "tags": [
-            "cloud-computing"
-        ]
-    },
-    {
-        "id": 13,
-        "difficulty": "beginner",
-        "tags": [
-            "sql",
-            "javascript",
-            "python"
-        ]
-    },
-    {
-        "id": 14,
-        "difficulty": "intermediate",
-        "tags": [
-            "backend",
-            "javascript",
-            "html"
-        ]
-    },
-    {
-        "id": 15,
-        "difficulty": "advanced",
-        "tags": [
-            "python",
-            "data-science"
-        ]
-    },
-    {
         "id": 16,
+        "name": "Python for Advanced",
         "difficulty": "advanced",
         "tags": [
-            "web-development",
-            "css",
-            "javascript"
+            "sql"
         ]
     },
     {
         "id": 17,
-        "difficulty": "beginner",
-        "tags": [
-            "frontend",
-            "web-development",
-            "css"
-        ]
-    },
-    {
-        "id": 18,
+        "name": "Devops for Intermediate",
         "difficulty": "intermediate",
         "tags": [
-            "databases",
-            "sql"
-        ]
-    },
-    {
-        "id": 19,
-        "difficulty": "advanced",
-        "tags": [
-            "cloud-computing"
-        ]
-    },
-    {
-        "id": 20,
-        "difficulty": "advanced",
-        "tags": [
-            "devops",
-            "cloud-computing"
-        ]
-    },
-    {
-        "id": 21,
-        "difficulty": "intermediate",
-        "tags": [
+            "cloud-computing",
             "devops"
         ]
     },
     {
-        "id": 22,
-        "difficulty": "advanced",
+        "id": 18,
+        "name": "Databases for Intermediate",
+        "difficulty": "intermediate",
+        "tags": [
+            "sql",
+            "databases",
+            "web-development"
+        ]
+    },
+    {
+        "id": 19,
+        "name": "Data Science for Intermediate",
+        "difficulty": "intermediate",
+        "tags": [
+            "machine-learning",
+            "data-science",
+            "python"
+        ]
+    },
+    {
+        "id": 20,
+        "name": "Cybersecurity for Beginner",
+        "difficulty": "beginner",
         "tags": [
             "mobile-development",
-            "game-development",
             "cybersecurity"
         ]
     },
     {
-        "id": 23,
+        "id": 21,
+        "name": "Cybersecurity for Beginner",
         "difficulty": "beginner",
         "tags": [
-            "databases",
-            "sql"
+            "mobile-development",
+            "game-development"
+        ]
+    },
+    {
+        "id": 22,
+        "name": "Frontend for Intermediate",
+        "difficulty": "intermediate",
+        "tags": [
+            "frontend",
+            "html"
+        ]
+    },
+    {
+        "id": 23,
+        "name": "Data Science for Advanced",
+        "difficulty": "advanced",
+        "tags": [
+            "data-science",
+            "python"
         ]
     },
     {
         "id": 24,
-        "difficulty": "beginner",
+        "name": "Devops for Advanced",
+        "difficulty": "advanced",
         "tags": [
-            "data-science",
-            "python",
-            "machine-learning"
+            "cloud-computing",
+            "devops",
+            "cybersecurity"
         ]
     },
     {
         "id": 25,
+        "name": "Python for Advanced",
         "difficulty": "advanced",
         "tags": [
-            "python",
             "sql",
             "javascript"
         ]
     },
     {
         "id": 26,
+        "name": "Python for Beginner",
+        "difficulty": "beginner",
+        "tags": [
+            "sql"
+        ]
+    },
+    {
+        "id": 27,
+        "name": "Frontend for Advanced",
         "difficulty": "advanced",
+        "tags": [
+            "javascript"
+        ]
+    },
+    {
+        "id": 28,
+        "name": "Cybersecurity for Beginner",
+        "difficulty": "beginner",
+        "tags": [
+            "mobile-development"
+        ]
+    },
+    {
+        "id": 29,
+        "name": "Databases for Advanced",
+        "difficulty": "advanced",
+        "tags": [
+            "databases",
+            "sql"
+        ]
+    },
+    {
+        "id": 30,
+        "name": "Frontend for Intermediate",
+        "difficulty": "intermediate",
+        "tags": [
+            "html"
+        ]
+    },
+    {
+        "id": 31,
+        "name": "Python for Intermediate",
+        "difficulty": "intermediate",
+        "tags": [
+            "python"
+        ]
+    },
+    {
+        "id": 32,
+        "name": "Frontend for Advanced",
+        "difficulty": "advanced",
+        "tags": [
+            "backend",
+            "css",
+            "frontend"
+        ]
+    },
+    {
+        "id": 33,
+        "name": "Devops for Beginner",
+        "difficulty": "beginner",
+        "tags": [
+            "cloud-computing"
+        ]
+    },
+    {
+        "id": 34,
+        "name": "Devops for Advanced",
+        "difficulty": "advanced",
+        "tags": [
+            "cloud-computing"
+        ]
+    },
+    {
+        "id": 35,
+        "name": "Data Science for Advanced",
+        "difficulty": "advanced",
+        "tags": [
+            "machine-learning"
+        ]
+    },
+    {
+        "id": 36,
+        "name": "Python for Beginner",
+        "difficulty": "beginner",
+        "tags": [
+            "python"
+        ]
+    },
+    {
+        "id": 37,
+        "name": "Cybersecurity for Beginner",
+        "difficulty": "beginner",
+        "tags": [
+            "game-development"
+        ]
+    },
+    {
+        "id": 38,
+        "name": "Frontend for Beginner",
+        "difficulty": "beginner",
+        "tags": [
+            "javascript"
+        ]
+    },
+    {
+        "id": 39,
+        "name": "Cybersecurity for Advanced",
+        "difficulty": "advanced",
+        "tags": [
+            "game-development",
+            "cybersecurity"
+        ]
+    },
+    {
+        "id": 40,
+        "name": "Devops for Intermediate",
+        "difficulty": "intermediate",
         "tags": [
             "devops",
             "cloud-computing",
@@ -214,181 +356,18 @@
         ]
     },
     {
-        "id": 27,
-        "difficulty": "advanced",
-        "tags": [
-            "databases",
-            "sql"
-        ]
-    },
-    {
-        "id": 28,
-        "difficulty": "intermediate",
-        "tags": [
-            "machine-learning"
-        ]
-    },
-    {
-        "id": 29,
+        "id": 41,
+        "name": "Data Science for Beginner",
         "difficulty": "beginner",
         "tags": [
-            "cloud-computing"
-        ]
-    },
-    {
-        "id": 30,
-        "difficulty": "advanced",
-        "tags": [
-            "game-development"
-        ]
-    },
-    {
-        "id": 31,
-        "difficulty": "advanced",
-        "tags": [
-            "machine-learning",
             "python",
             "data-science"
-        ]
-    },
-    {
-        "id": 32,
-        "difficulty": "advanced",
-        "tags": [
-            "javascript",
-            "sql",
-            "python"
-        ]
-    },
-    {
-        "id": 33,
-        "difficulty": "beginner",
-        "tags": [
-            "sql",
-            "python",
-            "javascript"
-        ]
-    },
-    {
-        "id": 34,
-        "difficulty": "beginner",
-        "tags": [
-            "sql"
-        ]
-    },
-    {
-        "id": 35,
-        "difficulty": "beginner",
-        "tags": [
-            "sql",
-            "databases"
-        ]
-    },
-    {
-        "id": 36,
-        "difficulty": "intermediate",
-        "tags": [
-            "python",
-            "sql",
-            "javascript"
-        ]
-    },
-    {
-        "id": 37,
-        "difficulty": "intermediate",
-        "tags": [
-            "cloud-computing",
-            "devops"
-        ]
-    },
-    {
-        "id": 38,
-        "difficulty": "advanced",
-        "tags": [
-            "sql",
-            "databases"
-        ]
-    },
-    {
-        "id": 39,
-        "difficulty": "advanced",
-        "tags": [
-            "cybersecurity"
-        ]
-    },
-    {
-        "id": 40,
-        "difficulty": "intermediate",
-        "tags": [
-            "cloud-computing",
-            "devops"
-        ]
-    },
-    {
-        "id": 41,
-        "difficulty": "advanced",
-        "tags": [
-            "machine-learning"
         ]
     },
     {
         "id": 42,
+        "name": "Cybersecurity for Advanced",
         "difficulty": "advanced",
-        "tags": [
-            "python",
-            "machine-learning"
-        ]
-    },
-    {
-        "id": 43,
-        "difficulty": "beginner",
-        "tags": [
-            "cloud-computing"
-        ]
-    },
-    {
-        "id": 44,
-        "difficulty": "intermediate",
-        "tags": [
-            "machine-learning",
-            "python",
-            "data-science"
-        ]
-    },
-    {
-        "id": 45,
-        "difficulty": "intermediate",
-        "tags": [
-            "html",
-            "web-development"
-        ]
-    },
-    {
-        "id": 46,
-        "difficulty": "beginner",
-        "tags": [
-            "databases",
-            "sql"
-        ]
-    },
-    {
-        "id": 47,
-        "difficulty": "intermediate",
-        "tags": [
-            "sql",
-            "javascript"
-        ]
-    },
-    {
-        "id": 48,
-        "difficulty": "beginner",
-        "tags": [
-            "cloud-computing"
-        ]
-    },
-    {
-        "id": 49,
-        "difficulty": "beginner",
         "tags": [
             "cybersecurity",
             "mobile-development",
@@ -396,50 +375,396 @@
         ]
     },
     {
-        "id": 50,
+        "id": 43,
+        "name": "Frontend for Advanced",
         "difficulty": "advanced",
         "tags": [
-            "python",
-            "sql",
-            "javascript"
+            "web-development",
+            "css",
+            "frontend",
+            "html"
         ]
     },
     {
-        "id": 51,
+        "id": 44,
+        "name": "Frontend for Intermediate",
         "difficulty": "intermediate",
         "tags": [
-            "devops",
-            "cloud-computing",
-            "databases"
-        ]
-    },
-    {
-        "id": 52,
-        "difficulty": "advanced",
-        "tags": [
-            "databases",
-            "sql",
-            "python"
-        ]
-    },
-    {
-        "id": 53,
-        "difficulty": "advanced",
-        "tags": [
-            "frontend",
+            "web-development",
             "backend",
             "html"
         ]
     },
     {
-        "id": 54,
+        "id": 45,
+        "name": "Databases for Intermediate",
         "difficulty": "intermediate",
         "tags": [
+            "databases",
+            "sql",
+            "cloud-computing"
+        ]
+    },
+    {
+        "id": 46,
+        "name": "Devops for Beginner",
+        "difficulty": "beginner",
+        "tags": [
+            "devops",
+            "cloud-computing"
+        ]
+    },
+    {
+        "id": 47,
+        "name": "Devops for Advanced",
+        "difficulty": "advanced",
+        "tags": [
+            "devops"
+        ]
+    },
+    {
+        "id": 48,
+        "name": "Databases for Intermediate",
+        "difficulty": "intermediate",
+        "tags": [
+            "databases",
+            "sql",
+            "frontend"
+        ]
+    },
+    {
+        "id": 49,
+        "name": "Python for Intermediate",
+        "difficulty": "intermediate",
+        "tags": [
+            "sql",
+            "javascript",
             "python"
         ]
     },
     {
+        "id": 50,
+        "name": "Devops for Beginner",
+        "difficulty": "beginner",
+        "tags": [
+            "devops"
+        ]
+    },
+    {
+        "id": 51,
+        "name": "Data Science for Advanced",
+        "difficulty": "advanced",
+        "tags": [
+            "python",
+            "machine-learning"
+        ]
+    },
+    {
+        "id": 52,
+        "name": "Frontend for Advanced",
+        "difficulty": "advanced",
+        "tags": [
+            "css"
+        ]
+    },
+    {
+        "id": 53,
+        "name": "Frontend for Beginner",
+        "difficulty": "beginner",
+        "tags": [
+            "css",
+            "html"
+        ]
+    },
+    {
+        "id": 54,
+        "name": "Databases for Intermediate",
+        "difficulty": "intermediate",
+        "tags": [
+            "databases",
+            "sql",
+            "cybersecurity"
+        ]
+    },
+    {
         "id": 55,
+        "name": "Databases for Intermediate",
+        "difficulty": "intermediate",
+        "tags": [
+            "databases",
+            "sql",
+            "data-science"
+        ]
+    },
+    {
+        "id": 56,
+        "name": "Devops for Intermediate",
+        "difficulty": "intermediate",
+        "tags": [
+            "cloud-computing",
+            "devops",
+            "machine-learning"
+        ]
+    },
+    {
+        "id": 57,
+        "name": "Devops for Advanced",
+        "difficulty": "advanced",
+        "tags": [
+            "cloud-computing",
+            "devops",
+            "machine-learning"
+        ]
+    },
+    {
+        "id": 58,
+        "name": "Databases for Intermediate",
+        "difficulty": "intermediate",
+        "tags": [
+            "sql"
+        ]
+    },
+    {
+        "id": 59,
+        "name": "Frontend for Advanced",
+        "difficulty": "advanced",
+        "tags": [
+            "html"
+        ]
+    },
+    {
+        "id": 60,
+        "name": "Python for Intermediate",
+        "difficulty": "intermediate",
+        "tags": [
+            "sql",
+            "javascript"
+        ]
+    },
+    {
+        "id": 61,
+        "name": "Frontend for Beginner",
+        "difficulty": "beginner",
+        "tags": [
+            "html",
+            "web-development",
+            "css"
+        ]
+    },
+    {
+        "id": 62,
+        "name": "Databases for Beginner",
+        "difficulty": "beginner",
+        "tags": [
+            "sql",
+            "databases",
+            "cybersecurity"
+        ]
+    },
+    {
+        "id": 63,
+        "name": "Data Science for Intermediate",
+        "difficulty": "intermediate",
+        "tags": [
+            "machine-learning",
+            "python"
+        ]
+    },
+    {
+        "id": 64,
+        "name": "Cybersecurity for Intermediate",
+        "difficulty": "intermediate",
+        "tags": [
+            "cybersecurity",
+            "game-development",
+            "mobile-development"
+        ]
+    },
+    {
+        "id": 65,
+        "name": "Frontend for Intermediate",
+        "difficulty": "intermediate",
+        "tags": [
+            "backend",
+            "javascript"
+        ]
+    },
+    {
+        "id": 66,
+        "name": "Frontend for Beginner",
+        "difficulty": "beginner",
+        "tags": [
+            "javascript",
+            "css",
+            "html"
+        ]
+    },
+    {
+        "id": 67,
+        "name": "Frontend for Advanced",
+        "difficulty": "advanced",
+        "tags": [
+            "html",
+            "frontend",
+            "javascript"
+        ]
+    },
+    {
+        "id": 68,
+        "name": "Devops for Advanced",
+        "difficulty": "advanced",
+        "tags": [
+            "cloud-computing",
+            "devops",
+            "sql"
+        ]
+    },
+    {
+        "id": 69,
+        "name": "Cybersecurity for Intermediate",
+        "difficulty": "intermediate",
+        "tags": [
+            "game-development",
+            "mobile-development"
+        ]
+    },
+    {
+        "id": 70,
+        "name": "Data Science for Intermediate",
+        "difficulty": "intermediate",
+        "tags": [
+            "python",
+            "data-science"
+        ]
+    },
+    {
+        "id": 71,
+        "name": "Databases for Beginner",
+        "difficulty": "beginner",
+        "tags": [
+            "sql",
+            "databases",
+            "mobile-development"
+        ]
+    },
+    {
+        "id": 72,
+        "name": "Frontend for Advanced",
+        "difficulty": "advanced",
+        "tags": [
+            "javascript",
+            "web-development",
+            "backend"
+        ]
+    },
+    {
+        "id": 73,
+        "name": "Databases for Beginner",
+        "difficulty": "beginner",
+        "tags": [
+            "databases",
+            "sql",
+            "css"
+        ]
+    },
+    {
+        "id": 74,
+        "name": "Databases for Beginner",
+        "difficulty": "beginner",
+        "tags": [
+            "sql",
+            "databases",
+            "python"
+        ]
+    },
+    {
+        "id": 75,
+        "name": "Databases for Intermediate",
+        "difficulty": "intermediate",
+        "tags": [
+            "sql",
+            "databases",
+            "javascript"
+        ]
+    },
+    {
+        "id": 76,
+        "name": "Cybersecurity for Beginner",
+        "difficulty": "beginner",
+        "tags": [
+            "cybersecurity",
+            "game-development"
+        ]
+    },
+    {
+        "id": 77,
+        "name": "Frontend for Intermediate",
+        "difficulty": "intermediate",
+        "tags": [
+            "css",
+            "web-development",
+            "html"
+        ]
+    },
+    {
+        "id": 78,
+        "name": "Frontend for Advanced",
+        "difficulty": "advanced",
+        "tags": [
+            "frontend",
+            "backend",
+            "javascript",
+            "html"
+        ]
+    },
+    {
+        "id": 79,
+        "name": "Devops for Beginner",
+        "difficulty": "beginner",
+        "tags": [
+            "cloud-computing",
+            "devops",
+            "frontend"
+        ]
+    },
+    {
+        "id": 80,
+        "name": "Frontend for Beginner",
+        "difficulty": "beginner",
+        "tags": [
+            "frontend"
+        ]
+    },
+    {
+        "id": 81,
+        "name": "Data Science for Intermediate",
+        "difficulty": "intermediate",
+        "tags": [
+            "machine-learning",
+            "data-science"
+        ]
+    },
+    {
+        "id": 82,
+        "name": "Devops for Intermediate",
+        "difficulty": "intermediate",
+        "tags": [
+            "cloud-computing",
+            "devops",
+            "python"
+        ]
+    },
+    {
+        "id": 83,
+        "name": "Cybersecurity for Intermediate",
+        "difficulty": "intermediate",
+        "tags": [
+            "game-development"
+        ]
+    },
+    {
+        "id": 84,
+        "name": "Cybersecurity for Intermediate",
         "difficulty": "intermediate",
         "tags": [
             "cybersecurity",
@@ -447,314 +772,95 @@
         ]
     },
     {
-        "id": 56,
+        "id": 85,
+        "name": "Frontend for Intermediate",
         "difficulty": "intermediate",
         "tags": [
-            "data-science",
-            "machine-learning"
+            "javascript",
+            "html"
         ]
     },
     {
-        "id": 57,
+        "id": 86,
+        "name": "Frontend for Intermediate",
         "difficulty": "intermediate",
         "tags": [
-            "sql",
-            "databases"
+            "web-development",
+            "javascript",
+            "css",
+            "html"
         ]
     },
     {
-        "id": 58,
+        "id": 87,
+        "name": "Devops for Advanced",
+        "difficulty": "advanced",
+        "tags": [
+            "cloud-computing",
+            "devops",
+            "mobile-development"
+        ]
+    },
+    {
+        "id": 88,
+        "name": "Frontend for Beginner",
         "difficulty": "beginner",
         "tags": [
-            "css"
+            "html",
+            "web-development"
         ]
     },
     {
-        "id": 59,
+        "id": 89,
+        "name": "Databases for Advanced",
+        "difficulty": "advanced",
+        "tags": [
+            "databases",
+            "sql",
+            "data-science"
+        ]
+    },
+    {
+        "id": 90,
+        "name": "Cybersecurity for Intermediate",
         "difficulty": "intermediate",
         "tags": [
             "mobile-development"
         ]
     },
     {
-        "id": 60,
-        "difficulty": "intermediate",
-        "tags": [
-            "mobile-development",
-            "game-development"
-        ]
-    },
-    {
-        "id": 61,
-        "difficulty": "advanced",
-        "tags": [
-            "python",
-            "javascript",
-            "sql"
-        ]
-    },
-    {
-        "id": 62,
-        "difficulty": "beginner",
-        "tags": [
-            "cybersecurity",
-            "game-development"
-        ]
-    },
-    {
-        "id": 63,
-        "difficulty": "beginner",
-        "tags": [
-            "game-development",
-            "mobile-development",
-            "cybersecurity"
-        ]
-    },
-    {
-        "id": 64,
-        "difficulty": "intermediate",
-        "tags": [
-            "backend",
-            "web-development",
-            "html"
-        ]
-    },
-    {
-        "id": 65,
-        "difficulty": "advanced",
-        "tags": [
-            "databases",
-            "sql"
-        ]
-    },
-    {
-        "id": 66,
-        "difficulty": "advanced",
-        "tags": [
-            "databases",
-            "sql"
-        ]
-    },
-    {
-        "id": 67,
-        "difficulty": "beginner",
-        "tags": [
-            "sql",
-            "python"
-        ]
-    },
-    {
-        "id": 68,
-        "difficulty": "intermediate",
-        "tags": [
-            "sql",
-            "databases"
-        ]
-    },
-    {
-        "id": 69,
-        "difficulty": "advanced",
-        "tags": [
-            "javascript",
-            "html",
-            "frontend"
-        ]
-    },
-    {
-        "id": 70,
-        "difficulty": "intermediate",
-        "tags": [
-            "html",
-            "css",
-            "frontend"
-        ]
-    },
-    {
-        "id": 71,
-        "difficulty": "advanced",
-        "tags": [
-            "css",
-            "web-development"
-        ]
-    },
-    {
-        "id": 72,
-        "difficulty": "intermediate",
-        "tags": [
-            "frontend",
-            "html"
-        ]
-    },
-    {
-        "id": 73,
-        "difficulty": "beginner",
-        "tags": [
-            "devops"
-        ]
-    },
-    {
-        "id": 74,
-        "difficulty": "beginner",
-        "tags": [
-            "game-development",
-            "mobile-development",
-            "cybersecurity"
-        ]
-    },
-    {
-        "id": 75,
-        "difficulty": "beginner",
-        "tags": [
-            "mobile-development",
-            "game-development"
-        ]
-    },
-    {
-        "id": 76,
-        "difficulty": "beginner",
-        "tags": [
-            "backend",
-            "javascript",
-            "frontend"
-        ]
-    },
-    {
-        "id": 77,
-        "difficulty": "intermediate",
-        "tags": [
-            "sql"
-        ]
-    },
-    {
-        "id": 78,
-        "difficulty": "advanced",
-        "tags": [
-            "cloud-computing"
-        ]
-    },
-    {
-        "id": 79,
-        "difficulty": "advanced",
-        "tags": [
-            "cloud-computing",
-            "devops"
-        ]
-    },
-    {
-        "id": 80,
-        "difficulty": "advanced",
-        "tags": [
-            "devops"
-        ]
-    },
-    {
-        "id": 81,
-        "difficulty": "intermediate",
-        "tags": [
-            "python",
-            "data-science"
-        ]
-    },
-    {
-        "id": 82,
-        "difficulty": "advanced",
-        "tags": [
-            "devops",
-            "cloud-computing",
-            "python"
-        ]
-    },
-    {
-        "id": 83,
-        "difficulty": "intermediate",
-        "tags": [
-            "databases",
-            "sql"
-        ]
-    },
-    {
-        "id": 84,
-        "difficulty": "intermediate",
-        "tags": [
-            "javascript",
-            "python"
-        ]
-    },
-    {
-        "id": 85,
-        "difficulty": "intermediate",
-        "tags": [
-            "javascript",
-            "sql",
-            "python"
-        ]
-    },
-    {
-        "id": 86,
-        "difficulty": "advanced",
-        "tags": [
-            "javascript"
-        ]
-    },
-    {
-        "id": 87,
-        "difficulty": "beginner",
-        "tags": [
-            "mobile-development",
-            "game-development",
-            "cybersecurity"
-        ]
-    },
-    {
-        "id": 88,
-        "difficulty": "intermediate",
-        "tags": [
-            "frontend",
-            "html"
-        ]
-    },
-    {
-        "id": 89,
-        "difficulty": "intermediate",
-        "tags": [
-            "devops"
-        ]
-    },
-    {
-        "id": 90,
-        "difficulty": "intermediate",
-        "tags": [
-            "sql"
-        ]
-    },
-    {
         "id": 91,
-        "difficulty": "advanced",
+        "name": "Frontend for Beginner",
+        "difficulty": "beginner",
         "tags": [
-            "devops",
-            "cloud-computing",
-            "machine-learning"
+            "web-development",
+            "html",
+            "backend"
         ]
     },
     {
         "id": 92,
+        "name": "Databases for Beginner",
         "difficulty": "beginner",
         "tags": [
             "sql",
             "databases",
-            "devops"
+            "html"
         ]
     },
     {
         "id": 93,
-        "difficulty": "intermediate",
+        "name": "Data Science for Beginner",
+        "difficulty": "beginner",
         "tags": [
-            "cloud-computing"
+            "machine-learning",
+            "python"
         ]
     },
     {
         "id": 94,
-        "difficulty": "beginner",
+        "name": "Databases for Advanced",
+        "difficulty": "advanced",
         "tags": [
             "sql",
             "databases",
@@ -763,20 +869,227 @@
     },
     {
         "id": 95,
+        "name": "Python for Advanced",
+        "difficulty": "advanced",
+        "tags": [
+            "python",
+            "sql"
+        ]
+    },
+    {
+        "id": 96,
+        "name": "Data Science for Beginner",
+        "difficulty": "beginner",
+        "tags": [
+            "python",
+            "data-science",
+            "machine-learning"
+        ]
+    },
+    {
+        "id": 97,
+        "name": "Frontend for Advanced",
+        "difficulty": "advanced",
+        "tags": [
+            "frontend"
+        ]
+    },
+    {
+        "id": 98,
+        "name": "Frontend for Advanced",
+        "difficulty": "advanced",
+        "tags": [
+            "html",
+            "frontend",
+            "css"
+        ]
+    },
+    {
+        "id": 99,
+        "name": "Python for Intermediate",
         "difficulty": "intermediate",
         "tags": [
             "javascript"
         ]
     },
     {
-        "id": 96,
+        "id": 100,
+        "name": "Frontend for Intermediate",
         "difficulty": "intermediate",
         "tags": [
+            "frontend"
+        ]
+    },
+    {
+        "id": 101,
+        "name": "Cybersecurity for Beginner",
+        "difficulty": "beginner",
+        "tags": [
+            "cybersecurity"
+        ]
+    },
+    {
+        "id": 102,
+        "name": "Devops for Advanced",
+        "difficulty": "advanced",
+        "tags": [
+            "devops",
+            "cloud-computing",
+            "html"
+        ]
+    },
+    {
+        "id": 103,
+        "name": "Databases for Beginner",
+        "difficulty": "beginner",
+        "tags": [
+            "databases",
+            "sql",
+            "web-development"
+        ]
+    },
+    {
+        "id": 104,
+        "name": "Data Science for Beginner",
+        "difficulty": "beginner",
+        "tags": [
+            "machine-learning"
+        ]
+    },
+    {
+        "id": 105,
+        "name": "Cybersecurity for Advanced",
+        "difficulty": "advanced",
+        "tags": [
+            "mobile-development",
+            "game-development"
+        ]
+    },
+    {
+        "id": 106,
+        "name": "Databases for Beginner",
+        "difficulty": "beginner",
+        "tags": [
+            "sql",
+            "databases",
             "devops"
         ]
     },
     {
-        "id": 97,
+        "id": 107,
+        "name": "Frontend for Advanced",
+        "difficulty": "advanced",
+        "tags": [
+            "javascript",
+            "backend"
+        ]
+    },
+    {
+        "id": 108,
+        "name": "Frontend for Beginner",
+        "difficulty": "beginner",
+        "tags": [
+            "css",
+            "web-development"
+        ]
+    },
+    {
+        "id": 109,
+        "name": "Databases for Beginner",
+        "difficulty": "beginner",
+        "tags": [
+            "sql",
+            "databases",
+            "javascript"
+        ]
+    },
+    {
+        "id": 110,
+        "name": "Devops for Intermediate",
+        "difficulty": "intermediate",
+        "tags": [
+            "devops",
+            "cloud-computing",
+            "javascript"
+        ]
+    },
+    {
+        "id": 111,
+        "name": "Frontend for Beginner",
+        "difficulty": "beginner",
+        "tags": [
+            "frontend",
+            "css",
+            "html"
+        ]
+    },
+    {
+        "id": 112,
+        "name": "Frontend for Advanced",
+        "difficulty": "advanced",
+        "tags": [
+            "web-development",
+            "backend",
+            "html"
+        ]
+    },
+    {
+        "id": 113,
+        "name": "Frontend for Beginner",
+        "difficulty": "beginner",
+        "tags": [
+            "html",
+            "frontend",
+            "web-development"
+        ]
+    },
+    {
+        "id": 114,
+        "name": "Frontend for Advanced",
+        "difficulty": "advanced",
+        "tags": [
+            "web-development",
+            "javascript"
+        ]
+    },
+    {
+        "id": 115,
+        "name": "Frontend for Intermediate",
+        "difficulty": "intermediate",
+        "tags": [
+            "web-development",
+            "javascript",
+            "frontend"
+        ]
+    },
+    {
+        "id": 116,
+        "name": "Frontend for Beginner",
+        "difficulty": "beginner",
+        "tags": [
+            "web-development"
+        ]
+    },
+    {
+        "id": 117,
+        "name": "Python for Intermediate",
+        "difficulty": "intermediate",
+        "tags": [
+            "sql",
+            "python"
+        ]
+    },
+    {
+        "id": 118,
+        "name": "Data Science for Advanced",
+        "difficulty": "advanced",
+        "tags": [
+            "data-science"
+        ]
+    },
+    {
+        "id": 119,
+        "name": "Devops for Advanced",
         "difficulty": "advanced",
         "tags": [
             "cloud-computing",
@@ -784,439 +1097,292 @@
         ]
     },
     {
-        "id": 98,
-        "difficulty": "advanced",
-        "tags": [
-            "devops",
-            "cloud-computing"
-        ]
-    },
-    {
-        "id": 99,
-        "difficulty": "intermediate",
-        "tags": [
-            "backend",
-            "css"
-        ]
-    },
-    {
-        "id": 100,
-        "difficulty": "advanced",
-        "tags": [
-            "databases",
-            "sql"
-        ]
-    },
-    {
-        "id": 101,
-        "difficulty": "intermediate",
-        "tags": [
-            "data-science",
-            "python",
-            "machine-learning"
-        ]
-    },
-    {
-        "id": 102,
-        "difficulty": "intermediate",
-        "tags": [
-            "javascript",
-            "python",
-            "sql"
-        ]
-    },
-    {
-        "id": 103,
-        "difficulty": "advanced",
-        "tags": [
-            "javascript",
-            "html",
-            "frontend"
-        ]
-    },
-    {
-        "id": 104,
+        "id": 120,
+        "name": "Frontend for Beginner",
         "difficulty": "beginner",
         "tags": [
+            "javascript",
             "html"
         ]
     },
     {
-        "id": 105,
+        "id": 121,
+        "name": "Cybersecurity for Intermediate",
+        "difficulty": "intermediate",
+        "tags": [
+            "cybersecurity"
+        ]
+    },
+    {
+        "id": 122,
+        "name": "Devops for Beginner",
         "difficulty": "beginner",
         "tags": [
-            "frontend",
+            "cloud-computing",
+            "devops",
+            "machine-learning"
+        ]
+    },
+    {
+        "id": 123,
+        "name": "Python for Beginner",
+        "difficulty": "beginner",
+        "tags": [
+            "python",
+            "sql"
+        ]
+    },
+    {
+        "id": 124,
+        "name": "Frontend for Advanced",
+        "difficulty": "advanced",
+        "tags": [
+            "javascript",
+            "html"
+        ]
+    },
+    {
+        "id": 125,
+        "name": "Data Science for Beginner",
+        "difficulty": "beginner",
+        "tags": [
+            "data-science"
+        ]
+    },
+    {
+        "id": 126,
+        "name": "Python for Beginner",
+        "difficulty": "beginner",
+        "tags": [
+            "sql",
+            "javascript"
+        ]
+    },
+    {
+        "id": 127,
+        "name": "Devops for Beginner",
+        "difficulty": "beginner",
+        "tags": [
+            "cloud-computing",
+            "devops",
             "backend"
         ]
     },
     {
-        "id": 106,
-        "difficulty": "beginner",
-        "tags": [
-            "devops",
-            "cloud-computing"
-        ]
-    },
-    {
-        "id": 107,
-        "difficulty": "beginner",
-        "tags": [
-            "game-development",
-            "cybersecurity",
-            "mobile-development"
-        ]
-    },
-    {
-        "id": 108,
+        "id": 128,
+        "name": "Data Science for Advanced",
         "difficulty": "advanced",
-        "tags": [
-            "cybersecurity",
-            "mobile-development",
-            "game-development"
-        ]
-    },
-    {
-        "id": 109,
-        "difficulty": "intermediate",
         "tags": [
             "machine-learning",
             "data-science"
         ]
     },
     {
-        "id": 110,
+        "id": 129,
+        "name": "Frontend for Advanced",
         "difficulty": "advanced",
         "tags": [
+            "frontend",
+            "html"
+        ]
+    },
+    {
+        "id": 130,
+        "name": "Devops for Beginner",
+        "difficulty": "beginner",
+        "tags": [
+            "cloud-computing",
+            "devops",
+            "databases"
+        ]
+    },
+    {
+        "id": 131,
+        "name": "Databases for Advanced",
+        "difficulty": "advanced",
+        "tags": [
+            "databases",
+            "sql",
             "javascript"
         ]
     },
     {
-        "id": 111,
-        "difficulty": "beginner",
-        "tags": [
-            "machine-learning",
-            "data-science",
-            "python"
-        ]
-    },
-    {
-        "id": 112,
-        "difficulty": "beginner",
-        "tags": [
-            "sql",
-            "databases",
-            "mobile-development"
-        ]
-    },
-    {
-        "id": 113,
+        "id": 132,
+        "name": "Frontend for Advanced",
         "difficulty": "advanced",
         "tags": [
             "frontend",
+            "html",
+            "web-development"
+        ]
+    },
+    {
+        "id": 133,
+        "name": "Frontend for Beginner",
+        "difficulty": "beginner",
+        "tags": [
+            "backend"
+        ]
+    },
+    {
+        "id": 134,
+        "name": "Frontend for Advanced",
+        "difficulty": "advanced",
+        "tags": [
+            "css",
+            "web-development"
+        ]
+    },
+    {
+        "id": 135,
+        "name": "Frontend for Intermediate",
+        "difficulty": "intermediate",
+        "tags": [
+            "web-development",
+            "backend",
+            "javascript"
+        ]
+    },
+    {
+        "id": 136,
+        "name": "Frontend for Beginner",
+        "difficulty": "beginner",
+        "tags": [
+            "frontend",
+            "javascript",
+            "css"
+        ]
+    },
+    {
+        "id": 137,
+        "name": "Frontend for Advanced",
+        "difficulty": "advanced",
+        "tags": [
+            "backend",
+            "frontend",
+            "web-development"
+        ]
+    },
+    {
+        "id": 138,
+        "name": "Frontend for Beginner",
+        "difficulty": "beginner",
+        "tags": [
+            "backend",
+            "html"
+        ]
+    },
+    {
+        "id": 139,
+        "name": "Cybersecurity for Intermediate",
+        "difficulty": "intermediate",
+        "tags": [
+            "mobile-development",
+            "cybersecurity"
+        ]
+    },
+    {
+        "id": 140,
+        "name": "Devops for Beginner",
+        "difficulty": "beginner",
+        "tags": [
+            "devops",
+            "cloud-computing",
+            "javascript"
+        ]
+    },
+    {
+        "id": 141,
+        "name": "Frontend for Advanced",
+        "difficulty": "advanced",
+        "tags": [
+            "web-development",
+            "html"
+        ]
+    },
+    {
+        "id": 142,
+        "name": "Frontend for Beginner",
+        "difficulty": "beginner",
+        "tags": [
             "backend",
             "css",
             "html"
         ]
     },
     {
-        "id": 114,
+        "id": 143,
+        "name": "Frontend for Advanced",
         "difficulty": "advanced",
         "tags": [
-            "data-science",
-            "machine-learning"
-        ]
-    },
-    {
-        "id": 115,
-        "difficulty": "intermediate",
-        "tags": [
-            "machine-learning",
-            "python",
-            "data-science"
-        ]
-    },
-    {
-        "id": 116,
-        "difficulty": "advanced",
-        "tags": [
-            "machine-learning",
-            "data-science"
-        ]
-    },
-    {
-        "id": 117,
-        "difficulty": "beginner",
-        "tags": [
-            "game-development",
-            "cybersecurity"
-        ]
-    },
-    {
-        "id": 118,
-        "difficulty": "intermediate",
-        "tags": [
-            "python",
-            "javascript",
-            "sql"
-        ]
-    },
-    {
-        "id": 119,
-        "difficulty": "advanced",
-        "tags": [
-            "sql",
-            "databases",
-            "machine-learning"
-        ]
-    },
-    {
-        "id": 120,
-        "difficulty": "beginner",
-        "tags": [
-            "sql"
-        ]
-    },
-    {
-        "id": 121,
-        "difficulty": "beginner",
-        "tags": [
-            "devops",
-            "cloud-computing",
-            "javascript"
-        ]
-    },
-    {
-        "id": 122,
-        "difficulty": "beginner",
-        "tags": [
-            "javascript"
-        ]
-    },
-    {
-        "id": 123,
-        "difficulty": "intermediate",
-        "tags": [
-            "python"
-        ]
-    },
-    {
-        "id": 124,
-        "difficulty": "beginner",
-        "tags": [
-            "html",
-            "frontend",
-            "web-development"
-        ]
-    },
-    {
-        "id": 125,
-        "difficulty": "beginner",
-        "tags": [
-            "databases",
-            "sql"
-        ]
-    },
-    {
-        "id": 126,
-        "difficulty": "advanced",
-        "tags": [
-            "databases",
-            "sql",
-            "cybersecurity"
-        ]
-    },
-    {
-        "id": 127,
-        "difficulty": "beginner",
-        "tags": [
-            "cloud-computing",
-            "devops",
-            "python"
-        ]
-    },
-    {
-        "id": 128,
-        "difficulty": "beginner",
-        "tags": [
-            "frontend",
-            "backend",
-            "web-development"
-        ]
-    },
-    {
-        "id": 129,
-        "difficulty": "advanced",
-        "tags": [
-            "sql",
-            "javascript"
-        ]
-    },
-    {
-        "id": 130,
-        "difficulty": "intermediate",
-        "tags": [
-            "cybersecurity"
-        ]
-    },
-    {
-        "id": 131,
-        "difficulty": "beginner",
-        "tags": [
-            "sql",
-            "databases",
-            "mobile-development"
-        ]
-    },
-    {
-        "id": 132,
-        "difficulty": "intermediate",
-        "tags": [
-            "machine-learning"
-        ]
-    },
-    {
-        "id": 133,
-        "difficulty": "advanced",
-        "tags": [
-            "game-development",
-            "cybersecurity",
-            "mobile-development"
-        ]
-    },
-    {
-        "id": 134,
-        "difficulty": "intermediate",
-        "tags": [
-            "data-science",
-            "python",
-            "machine-learning"
-        ]
-    },
-    {
-        "id": 135,
-        "difficulty": "advanced",
-        "tags": [
-            "html",
-            "web-development",
+            "css",
             "backend"
         ]
     },
     {
-        "id": 136,
-        "difficulty": "advanced",
-        "tags": [
-            "python",
-            "data-science",
-            "machine-learning"
-        ]
-    },
-    {
-        "id": 137,
-        "difficulty": "intermediate",
-        "tags": [
-            "databases",
-            "sql"
-        ]
-    },
-    {
-        "id": 138,
-        "difficulty": "beginner",
-        "tags": [
-            "cybersecurity",
-            "game-development",
-            "mobile-development"
-        ]
-    },
-    {
-        "id": 139,
-        "difficulty": "beginner",
-        "tags": [
-            "mobile-development"
-        ]
-    },
-    {
-        "id": 140,
-        "difficulty": "advanced",
-        "tags": [
-            "python"
-        ]
-    },
-    {
-        "id": 141,
-        "difficulty": "beginner",
-        "tags": [
-            "mobile-development",
-            "cybersecurity",
-            "game-development"
-        ]
-    },
-    {
-        "id": 142,
-        "difficulty": "beginner",
-        "tags": [
-            "cloud-computing"
-        ]
-    },
-    {
-        "id": 143,
-        "difficulty": "beginner",
-        "tags": [
-            "python",
-            "sql"
-        ]
-    },
-    {
         "id": 144,
+        "name": "Frontend for Intermediate",
         "difficulty": "intermediate",
         "tags": [
-            "backend",
             "html",
-            "frontend"
+            "javascript",
+            "css"
         ]
     },
     {
         "id": 145,
+        "name": "Devops for Beginner",
         "difficulty": "beginner",
         "tags": [
-            "cloud-computing"
+            "devops",
+            "cloud-computing",
+            "web-development"
         ]
     },
     {
         "id": 146,
-        "difficulty": "intermediate",
+        "name": "Cybersecurity for Advanced",
+        "difficulty": "advanced",
         "tags": [
-            "python",
-            "sql",
-            "javascript"
+            "cybersecurity",
+            "mobile-development"
         ]
     },
     {
         "id": 147,
-        "difficulty": "beginner",
+        "name": "Databases for Advanced",
+        "difficulty": "advanced",
         "tags": [
             "sql",
-            "databases"
+            "databases",
+            "frontend"
         ]
     },
     {
         "id": 148,
-        "difficulty": "beginner",
+        "name": "Cybersecurity for Advanced",
+        "difficulty": "advanced",
         "tags": [
-            "devops"
+            "cybersecurity"
         ]
     },
     {
         "id": 149,
+        "name": "Python for Intermediate",
         "difficulty": "intermediate",
         "tags": [
-            "cloud-computing"
+            "python",
+            "javascript"
         ]
     },
     {
         "id": 150,
-        "difficulty": "intermediate",
+        "name": "Devops for Advanced",
+        "difficulty": "advanced",
         "tags": [
-            "machine-learning"
+            "cloud-computing",
+            "devops",
+            "game-development"
         ]
     }
 ]

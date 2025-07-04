@@ -1,5 +1,7 @@
+from backend.data.generate_data_to_json import user_courses
 from backend.ml.training import prepare_data, train_model
 from backend.app.api import data_store
+from backend.app.api import file_manager
 from joblib import dump
 import os
 

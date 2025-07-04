@@ -1,6 +1,12 @@
 import random
 import pandas as pd
 import json
+from pathlib import Path
+
+# Пути из file_manager.py
+COURSES_PATH = "C:/Users/Hasan/OneDrive/Рабочий стол/recomendation/recomendation/backend/data/raw/courses.json"
+USERS_PATH = "C:/Users/Hasan/OneDrive/Рабочий стол/recomendation/recomendation/backend/data/raw/users.json"
+USER_COURSES_PATH = "C:/Users/Hasan/OneDrive/Рабочий стол/recomendation/recomendation/backend/data/raw/user_courses.json"
 
 possible_tags = [
     "python", "data-science", "machine-learning", "web-development", "databases",
@@ -19,6 +25,7 @@ tag_categories = {
 
 difficulties = ["beginner", "intermediate", "advanced"]
 
+
 def get_logical_tags(category, num_tags):
     primary_tags = tag_categories[category]
     other_tags = [tag for tags in tag_categories.values() for tag in tags if tag not in primary_tags]
@@ -26,20 +33,55 @@ def get_logical_tags(category, num_tags):
     if len(tags) < num_tags:
         additional_tags = random.sample(other_tags, num_tags - len(tags))
         tags.extend(additional_tags)
-    return tags
-
-num_courses = 150
-courses = []
-for i in range(1, num_courses + 1):
-    category = random.choice(list(tag_categories.keys()))
-    num_tags = random.randint(1, 3)
-    tags = get_logical_tags(category, num_tags)
+    # Добавляем sql для databases и html для web-development с вероятностью 0.5
     if category == "databases" and "sql" not in tags:
         tags.append("sql")
     if category == "web-development" and "html" not in tags and random.random() < 0.5:
         tags.append("html")
-    difficulty = random.choice(difficulties)
-    courses.append({"id": i, "difficulty": difficulty, "tags": tags})
+    return tags
+
+
+def generate_course_name(primary_tag, difficulty):
+    tag_name = primary_tag.replace("-", " ").title()
+    difficulty_name = difficulty.title()
+    return f"{tag_name} for {difficulty_name}"
+
+
+def generate_courses(num_courses):
+    courses = []
+    seen_combinations = set()
+
+    for i in range(1, num_courses + 1):
+        attempts = 0
+        max_attempts = 100
+        while attempts < max_attempts:
+            category = random.choice(list(tag_categories.keys()))
+            num_tags = random.randint(1, 3)
+            tags = get_logical_tags(category, num_tags)
+            difficulty = random.choice(difficulties)
+            tags_tuple = tuple(sorted(tags))
+            combination = (tags_tuple, difficulty)
+
+            if combination not in seen_combinations:
+                seen_combinations.add(combination)
+                primary_tag = tag_categories[category][0]  # Первый тег из категории как основной
+                course_name = generate_course_name(primary_tag, difficulty)
+                courses.append({
+                    "id": i,
+                    "name": course_name,
+                    "difficulty": difficulty,
+                    "tags": tags
+                })
+                break
+            attempts += 1
+        if attempts == max_attempts:
+            print(f"Предупреждение: не удалось создать уникальный курс для id {i}")
+
+    return courses
+
+
+num_courses = 150
+courses = generate_courses(num_courses)
 
 num_users = 200
 users = []
@@ -53,7 +95,7 @@ for user in users:
     user_id = user["id"]
     interests = set(user["interests"])
     num_interactions = random.randint(5, 10)
-    selected_courses = random.sample(courses, num_interactions)
+    selected_courses = random.sample(courses, min(num_interactions, len(courses)))
     for course in selected_courses:
         course_tags = set(course["tags"])
         common_tags = course_tags.intersection(interests)
@@ -67,18 +109,20 @@ for user in users:
             "score": score
         })
 
+# Сохранение в файлы с использованием путей из file_manager.py
+with open(Path(COURSES_PATH), "w", encoding="utf-8") as f:
+    json.dump(courses, f, ensure_ascii=False, indent=2)
+
+with open(Path(USERS_PATH), "w", encoding="utf-8") as f:
+    json.dump(users, f, ensure_ascii=False, indent=2)
+
+with open(Path(USER_COURSES_PATH), "w", encoding="utf-8") as f:
+    json.dump(user_courses, f, ensure_ascii=False, indent=2)
+
+# Вывод статистики
 df_courses = pd.DataFrame(courses)
 df_users = pd.DataFrame(users)
 df_user_courses = pd.DataFrame(user_courses)
-
-with open("courses.json", "w", encoding="utf-8") as f:
-    json.dump(courses, f, ensure_ascii=False, indent=2)
-
-with open("users.json", "w", encoding="utf-8") as f:
-    json.dump(users, f, ensure_ascii=False, indent=2)
-
-with open("user_courses.json", "w", encoding="utf-8") as f:
-    json.dump(user_courses, f, ensure_ascii=False, indent=2)
 
 print(f"Количество курсов: {len(df_courses)}")
 print(f"Количество пользователей: {len(df_users)}")
