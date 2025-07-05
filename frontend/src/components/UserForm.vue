@@ -18,6 +18,6 @@ async function submit() {
     user_id: userId.value
   })
   localStorage.setItem('userId', userId.value)
-  router.push('/unpassed')
+  await router.push('/unpassed')
 }
 </script>

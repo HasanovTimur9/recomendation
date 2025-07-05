@@ -1,7 +1,7 @@
 <template>
   <div>
     <h2>Непройденные курсы</h2>
-    <button @click="router.push('/recomended')">Рекомендации курсов</button>
+    <button @click="router.push('/unpassed')">Непройденные курсы</button>
     <button @click="router.push('/passed')">Пройденные курсы</button>
     <button @click="logout">Выйти</button>
     <CourseList :courses="courses">
@@ -30,8 +30,8 @@ const router = useRouter()
 const userId = localStorage.getItem('userId') || ''
 
 onMounted(async () => {
-  const res = await api.get(`/courses/unpassed/${userId}`)
-  courses.value = res.data.unpassed_courses
+  const res = await api.get(`/recommendations/${userId}`)
+  courses.value = res.data.recommendations
 })
 
 async function markAsPassed(course: Course) {
