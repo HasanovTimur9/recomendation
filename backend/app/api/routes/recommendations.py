@@ -3,6 +3,7 @@ from backend.app.api import data_store
 from backend.ml.get_features import generate_features_for_user
 from backend.app.api.file_manager import save_raw_data
 from backend.ml.training import train_and_save_model
+from pydantic import BaseModel
 from joblib import load
 import pandas as pd
 import os
@@ -11,6 +12,17 @@ router = APIRouter()
 
 MODELS_DIR = "C:/Users/Hasan/OneDrive/Рабочий стол/recomendation/recomendation/backend/ml/models"
 
+class UserCourseInput(BaseModel):
+    user_id: str
+    course_id: int
+    score: int
+
+class UserCourseDelete(BaseModel):
+    user_id: str
+    course_id: int
+
+class UserInput(BaseModel):
+    user_id: str
 
 def load_models():
     return {
@@ -120,7 +132,9 @@ def get_recommendations(user_id: str, top_n: int = 5):
 
 
 @router.post("/users")
-def add_user(user_id: str):
+def add_user(payload: UserInput):
+    user_id = payload.user_id
+
     users = data_store.users
     courses = data_store.courses
     user_courses = data_store.user_courses
@@ -148,7 +162,11 @@ def get_user_profile(user_id: str):
 
 
 @router.post("/user_courses")
-def add_user_course(user_id: str, course_id: int, score: int):
+def add_user_course(payload: UserCourseInput):
+    user_id = payload.user_id
+    course_id = payload.course_id
+    score = payload.score
+
     users = data_store.users
     courses = data_store.courses
     user_courses = data_store.user_courses
@@ -159,8 +177,8 @@ def add_user_course(user_id: str, course_id: int, score: int):
     if not any(course['id'] == course_id for course in courses):
         raise HTTPException(status_code=404, detail=f"Курс {course_id} не найден")
 
-    if not 1 <= score <= 5:
-        raise HTTPException(status_code=400, detail="Оценка должна быть от 1 до 5")
+    if not 0 <= score <= 5:
+        raise HTTPException(status_code=400, detail="Оценка должна быть от 0 до 5")
 
     existing = next((uc for uc in user_courses if uc['user_id'] == user_id and uc['course_id'] == course_id), None)
     if existing and existing['completed']:
@@ -186,7 +204,10 @@ def add_user_course(user_id: str, course_id: int, score: int):
 
 
 @router.delete("/user_courses/{user_id}/{course_id}")
-def remove_user_course(user_id: str, course_id: int):
+def remove_user_course(payload: UserCourseDelete):
+    user_id = payload.user_id
+    course_id = payload.course_id
+
     users = data_store.users
     courses = data_store.courses
     user_courses = data_store.user_courses
