@@ -3,7 +3,6 @@ import pandas as pd
 import json
 from pathlib import Path
 
-# Пути из file_manager.py
 COURSES_PATH = "C:/Users/Hasan/OneDrive/Рабочий стол/recomendation/recomendation/backend/data/raw/courses.json"
 USERS_PATH = "C:/Users/Hasan/OneDrive/Рабочий стол/recomendation/recomendation/backend/data/raw/users.json"
 USER_COURSES_PATH = "C:/Users/Hasan/OneDrive/Рабочий стол/recomendation/recomendation/backend/data/raw/user_courses.json"
@@ -33,7 +32,6 @@ def get_logical_tags(category, num_tags):
     if len(tags) < num_tags:
         additional_tags = random.sample(other_tags, num_tags - len(tags))
         tags.extend(additional_tags)
-    # Добавляем sql для databases и html для web-development с вероятностью 0.5
     if category == "databases" and "sql" not in tags:
         tags.append("sql")
     if category == "web-development" and "html" not in tags and random.random() < 0.5:
@@ -109,7 +107,6 @@ for user in users:
             "score": score
         })
 
-# Сохранение в файлы с использованием путей из file_manager.py
 with open(Path(COURSES_PATH), "w", encoding="utf-8") as f:
     json.dump(courses, f, ensure_ascii=False, indent=2)
 
@@ -119,7 +116,6 @@ with open(Path(USERS_PATH), "w", encoding="utf-8") as f:
 with open(Path(USER_COURSES_PATH), "w", encoding="utf-8") as f:
     json.dump(user_courses, f, ensure_ascii=False, indent=2)
 
-# Вывод статистики
 df_courses = pd.DataFrame(courses)
 df_users = pd.DataFrame(users)
 df_user_courses = pd.DataFrame(user_courses)

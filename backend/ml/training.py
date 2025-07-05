@@ -22,7 +22,6 @@ def prepare_data(courses, user_courses, users):
     le_diff = LabelEncoder()
     df_courses['difficulty_enc'] = le_diff.fit_transform(df_courses['difficulty'])
 
-    # Проверка разнообразия тегов и сложностей
     print("Уникальные теги:", mlb.classes_.tolist())
     print("Уникальные сложности:", df_courses['difficulty'].unique().tolist())
     df_courses['tags_tuple'] = df_courses['tags'].apply(lambda x: tuple(sorted(x)))
