@@ -1,13 +1,13 @@
 <template>
   <div>
     <h2>Непройденные курсы</h2>
+    <button @click="router.push('/passed')">Пройденные курсы</button>
+    <button @click="logout">Выйти</button>
     <CourseList :courses="courses">
       <template #default="{ course }">
-        <button @click="markAsPassed(course.id)">Пройти курс</button>
+        <button @click="markAsPassed(course)">Пройти курс</button>
       </template>
     </CourseList>
-    <button @click="retrain">Переобучить модель</button>
-    <button @click="logout">Выйти</button>
   </div>
 </template>
 
@@ -17,7 +17,14 @@ import api from '../api'
 import CourseList from '../components/CourseList.vue'
 import { useRouter } from 'vue-router'
 
-const courses = ref([])
+interface Course {
+  id: number
+  name: string
+  difficulty: string
+  tags: string[]
+}
+
+const courses = ref<Course[]>([])
 const router = useRouter()
 const userId = localStorage.getItem('userId') || ''
 
@@ -26,22 +33,21 @@ onMounted(async () => {
   courses.value = res.data.unpassed_courses
 })
 
-async function markAsPassed(courseId: number) {
-  await api.post('/user_courses', {
-    user_id: userId,
-    course_id: courseId,
-    score: 5
-  })
-  courses.value = courses.value.filter(c => c.id !== courseId)
-}
+async function markAsPassed(course: Course) {
+  const raw = prompt(`Введите вашу оценку курсу "${course.name}" (от 0 до 5):`)
+  const score = Number(raw)
 
-async function retrain() {
-  try {
-    await api.post('/retrain_model')
-    alert('Модель успешно переобучена')
-  } catch {
-    alert('Ошибка при переобучении модели')
+  if (!score || score < 0 || score > 5) {
+    alert(`Некорректная оценка. Введите числ от 0 до 5.`)
   }
+
+  let result = await api.post('/user_courses', {
+    user_id: userId,
+    course_id: course.id,
+    score: score
+  })
+  courses.value = courses.value.filter(c => c.id !== course.id)
+  alert(result.data.message)
 }
 
 function logout() {

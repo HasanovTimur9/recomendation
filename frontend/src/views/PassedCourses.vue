@@ -1,12 +1,13 @@
 <template>
   <div>
     <h2>Пройденные курсы</h2>
+    <button @click="router.push('/unpassed')">Непройденные курсы</button>
+    <button @click="logout">Выйти</button>
     <CourseList :courses="courses">
       <template #default="{ course }">
         <button @click="removeCourse(course.id)">Удалить</button>
       </template>
     </CourseList>
-    <button @click="logout">Выйти</button>
   </div>
 </template>
 
@@ -26,8 +27,9 @@ onMounted(async () => {
 })
 
 async function removeCourse(courseId: number) {
-  await api.delete(`/user_courses/${userId}/${courseId}`)
+  let result = await api.delete(`/user_courses/${userId}/${courseId}`)
   courses.value = courses.value.filter(c => c.id !== courseId)
+  alert(result.data.message)
 }
 
 function logout() {
