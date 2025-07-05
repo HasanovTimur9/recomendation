@@ -25,6 +25,10 @@ def load_models():
 def get_passed_courses(user_id: str):
     courses = data_store.courses
     user_courses = data_store.user_courses
+    users = data_store.users
+
+    if not any(user['id'] == user_id for user in users):
+        raise HTTPException(status_code=404, detail=f"Пользователь {user_id} не найден")
 
     passed_courses = [uc for uc in user_courses if uc['user_id'] == user_id and uc['completed']]
     course_dict = {course['id']: course for course in courses}
@@ -33,9 +37,14 @@ def get_passed_courses(user_id: str):
     for uc in passed_courses:
         course_id = uc['course_id']
         if course_id in course_dict:
-            course_info = course_dict[course_id].copy()
-            course_info['score'] = uc['score']
-            course_info['completed'] = uc['completed']
+            course_info = {
+                'id': course_dict[course_id]['id'],
+                'name': course_dict[course_id]['name'],
+                'difficulty': course_dict[course_id]['difficulty'],
+                'tags': course_dict[course_id]['tags'],
+                'score': uc['score'],
+                'completed': uc['completed']
+            }
             result.append(course_info)
 
     return {"user_id": user_id, "passed_courses": result}
@@ -45,11 +54,24 @@ def get_passed_courses(user_id: str):
 def get_unpassed_courses(user_id: str):
     courses = data_store.courses
     user_courses = data_store.user_courses
+    users = data_store.users
+
+    if not any(user['id'] == user_id for user in users):
+        raise HTTPException(status_code=404, detail=f"Пользователь {user_id} не найден")
 
     passed_course_ids = {uc['course_id'] for uc in user_courses if uc['user_id'] == user_id and uc['completed']}
     unpassed_courses = [course for course in courses if course['id'] not in passed_course_ids]
 
-    result = [{"course_id": course['id'], **course, "completed": False, "score": None} for course in unpassed_courses]
+    result = [
+        {
+            'id': course['id'],
+            'name': course['name'],
+            'difficulty': course['difficulty'],
+            'tags': course['tags'],
+            'completed': False,
+            'score': None
+        } for course in unpassed_courses
+    ]
 
     return {"user_id": user_id, "unpassed_courses": result}
 
@@ -60,6 +82,9 @@ def get_recommendations(user_id: str, top_n: int = 5):
     user_courses = data_store.user_courses
     users = data_store.users
 
+    if not any(user['id'] == user_id for user in users):
+        raise HTTPException(status_code=404, detail=f"Пользователь {user_id} не найден")
+
     models = load_models()
     model, le_user, mlb, le_diff = models['model'], models['le_user'], models['mlb'], models['le_diff']
 
@@ -68,6 +93,8 @@ def get_recommendations(user_id: str, top_n: int = 5):
     if features_df.empty:
         raise HTTPException(status_code=404, detail=f"Нет данных для рекомендаций для пользователя {user_id}")
 
+    print("Столбцы в features_df:", features_df.columns.tolist())
+    print("Значения features_df:\n", features_df.head().to_string())
     predictions = model.predict(features_df)
 
     recommendations = pd.DataFrame({
@@ -79,7 +106,13 @@ def get_recommendations(user_id: str, top_n: int = 5):
 
     course_dict = {course['id']: course for course in courses}
     top_courses_info = [
-        {**course_dict[cid], "predicted_score": float(top_courses[top_courses['course_id'] == cid]['score'].iloc[0])}
+        {
+            'id': cid,
+            'name': course_dict[cid]['name'],
+            'difficulty': course_dict[cid]['difficulty'],
+            'tags': course_dict[cid]['tags'],
+            'predicted_score': float(top_courses[top_courses['course_id'] == cid]['score'].iloc[0])
+        }
         for cid in top_courses['course_id'] if cid in course_dict
     ]
 
@@ -87,7 +120,7 @@ def get_recommendations(user_id: str, top_n: int = 5):
 
 
 @router.post("/users")
-def add_user(user_id: str, interests: list[str] = []):
+def add_user(user_id: str):
     users = data_store.users
     courses = data_store.courses
     user_courses = data_store.user_courses
@@ -95,56 +128,23 @@ def add_user(user_id: str, interests: list[str] = []):
     if any(user['id'] == user_id for user in users):
         raise HTTPException(status_code=400, detail=f"Пользователь {user_id} уже существует")
 
-    valid_tags = set()
-    for course in courses:
-        valid_tags.update(course['tags'])
-    invalid_interests = [interest for interest in interests if interest not in valid_tags]
-    if invalid_interests:
-        raise HTTPException(status_code=400, detail=f"Недопустимые интересы: {invalid_interests}")
-
-    new_user = {"id": user_id, "interests": interests}
+    new_user = {"id": user_id}
     users.append(new_user)
     save_raw_data(courses, users, user_courses)
 
-    # Переобучение модели
     if not train_and_save_model(courses, user_courses, users, MODELS_DIR):
         print("Предупреждение: не удалось переобучить модель")
 
     return {"message": f"Пользователь {user_id} успешно добавлен", "user": new_user}
 
 
-@router.put("/users/{user_id}/interests")
-def update_user_interests(user_id: str, interest: str, action: str = "add"):
+@router.get("/users/{user_id}")
+def get_user_profile(user_id: str):
     users = data_store.users
-    courses = data_store.courses
-    user_courses = data_store.user_courses
-
     user = next((u for u in users if u['id'] == user_id), None)
     if not user:
         raise HTTPException(status_code=404, detail=f"Пользователь {user_id} не найден")
-
-    valid_tags = set()
-    for course in courses:
-        valid_tags.update(course['tags'])
-    if interest not in valid_tags:
-        raise HTTPException(status_code=400, detail=f"Недопустимый интерес: {interest}")
-
-    if action == "add":
-        if interest not in user['interests']:
-            user['interests'].append(interest)
-    elif action == "remove":
-        if interest in user['interests']:
-            user['interests'].remove(interest)
-    else:
-        raise HTTPException(status_code=400, detail="Действие должно быть 'add' или 'remove'")
-
-    save_raw_data(courses, users, user_courses)
-
-    # Переобучение модели
-    if not train_and_save_model(courses, user_courses, users, MODELS_DIR):
-        print("Предупреждение: не удалось переобучить модель")
-
-    return {"message": f"Интерес {interest} успешно {'добавлен' if action == 'add' else 'удален'}", "user": user}
+    return {"user_id": user_id}
 
 
 @router.post("/user_courses")
@@ -179,7 +179,6 @@ def add_user_course(user_id: str, course_id: int, score: int):
 
     save_raw_data(courses, users, user_courses)
 
-    # Переобучение модели
     if not train_and_save_model(courses, user_courses, users, MODELS_DIR):
         print("Предупреждение: не удалось переобучить модель")
 
@@ -205,20 +204,10 @@ def remove_user_course(user_id: str, course_id: int):
     user_courses.remove(existing)
     save_raw_data(courses, users, user_courses)
 
-    # Переобучение модели
     if not train_and_save_model(courses, user_courses, users, MODELS_DIR):
         print("Предупреждение: не удалось переобучить модель")
 
     return {"message": f"Курс {course_id} удален из истории пользователя {user_id}"}
-
-
-@router.get("/users/{user_id}")
-def get_user_profile(user_id: str):
-    users = data_store.users
-    user = next((u for u in users if u['id'] == user_id), None)
-    if not user:
-        raise HTTPException(status_code=404, detail=f"Пользователь {user_id} не найден")
-    return {"user_id": user_id, "interests": user['interests']}
 
 
 @router.post("/retrain_model")
