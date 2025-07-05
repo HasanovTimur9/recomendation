@@ -13,9 +13,9 @@ import api from "@/api";
 const userId = ref('')
 const router = useRouter()
 
-function submit() {
+async function submit() {
   await api.post('/users', {
-    user_id: userId
+    user_id: userId.value
   })
   localStorage.setItem('userId', userId.value)
   router.push('/unpassed')

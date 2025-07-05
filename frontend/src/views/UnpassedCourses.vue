@@ -37,10 +37,7 @@ async function markAsPassed(course: Course) {
   const raw = prompt(`Введите вашу оценку курсу "${course.name}" (от 0 до 5):`)
   const score = Number(raw)
 
-  if (!score || score < 0 || score > 5) {
-    alert(`Некорректная оценка. Введите числ от 0 до 5.`)
-  }
-
+  
   let result = await api.post('/user_courses', {
     user_id: userId,
     course_id: course.id,

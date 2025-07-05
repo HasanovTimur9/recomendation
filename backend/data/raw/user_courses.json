@@ -8974,5 +8974,17 @@
         "course_id": 1,
         "completed": true,
         "score": 5
+    },
+    {
+        "user_id": "user202",
+        "course_id": 1,
+        "completed": true,
+        "score": 0
+    },
+    {
+        "user_id": "user202",
+        "course_id": 4,
+        "completed": true,
+        "score": 5
     }
 ]

@@ -175,14 +175,14 @@ def add_user_course(payload: UserCourseInput):
         raise HTTPException(status_code=404, detail=f"Пользователь {user_id} не найден")
 
     if not any(course['id'] == course_id for course in courses):
-        raise HTTPException(status_code=404, detail=f"Курс {course_id} не найден")
+        raise HTTPException(status_code=404, detail=f"Курс с ID {course_id} не найден")
 
     if not 0 <= score <= 5:
         raise HTTPException(status_code=400, detail="Оценка должна быть от 0 до 5")
 
     existing = next((uc for uc in user_courses if uc['user_id'] == user_id and uc['course_id'] == course_id), None)
     if existing and existing['completed']:
-        raise HTTPException(status_code=400, detail=f"Курс {course_id} уже пройден пользователем {user_id}")
+        raise HTTPException(status_code=400, detail=f"Курс {courses[course_id].name} уже пройден пользователем {user_id}")
 
     if existing:
         existing['completed'] = True
@@ -200,7 +200,7 @@ def add_user_course(payload: UserCourseInput):
     if not train_and_save_model(courses, user_courses, users, MODELS_DIR):
         print("Предупреждение: не удалось переобучить модель")
 
-    return {"message": f"Курс {course_id} добавлен для пользователя {user_id} с оценкой {score}"}
+    return {"message": f"Курс {courses[course_id].name} добавлен для пользователя {user_id} с оценкой {score}"}
 
 
 @router.delete("/user_courses/{user_id}/{course_id}")
