@@ -140,7 +140,7 @@ def add_user(payload: UserInput):
     user_courses = data_store.user_courses
 
     if any(user['id'] == user_id for user in users):
-        raise HTTPException(status_code=400, detail=f"Пользователь {user_id} уже существует")
+        return {"message": f"Пользователь {user_id} уже существует"}
 
     new_user = {"id": user_id}
     users.append(new_user)
