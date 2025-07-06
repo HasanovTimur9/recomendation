@@ -1,9 +1,11 @@
 <template>
   <div>
     <h2>Рекомендации курсов</h2>
-    <button @click="router.push('/unpassed')">Непройденные курсы</button>
-    <button @click="router.push('/passed')">Пройденные курсы</button>
-    <button @click="logout">Выйти</button>
+    <div style="display: flex; justify-content: center;">
+      <button @click="router.push('/unpassed')">Непройденные курсы</button>
+      <button @click="router.push('/passed')">Пройденные курсы</button>
+      <button @click="logout">Выйти</button>
+    </div>
     <CourseList :courses="courses">
       <template #default="{ course }">
         <button @click="markAsPassed(course)">Пройти курс</button>
