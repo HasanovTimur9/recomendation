@@ -17,7 +17,6 @@ tag_categories = {
 
 
 def load_raw_data():
-    # Предполагается, что эта функция определена в другом модуле, например, file_manager.py
     from backend.app.api.file_manager import load_raw_data
     return load_raw_data()
 

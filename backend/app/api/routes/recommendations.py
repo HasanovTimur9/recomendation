@@ -145,9 +145,6 @@ def add_user_course(payload: UserCourseInput):
         raise HTTPException(status_code=400, detail="Успеваемость должна быть от 0 до 100")
 
     existing = next((uc for uc in user_courses if uc['user_id'] == user_id and uc['course_id'] == course_id), None)
-    if existing and existing['completed']:
-        raise HTTPException(status_code=400, detail=f"Курс уже пройден пользователем")
-
     if existing:
         existing['completed'] = True
         existing['score'] = score
@@ -167,3 +164,29 @@ def add_user_course(payload: UserCourseInput):
         print("Предупреждение: не удалось переобучить модель")
 
     return {"message": f"Курс {course_id} добавлен для пользователя {user_id} с оценкой {score} и успеваемостью {performance}"}
+
+@router.delete("/user_courses/{user_id}/{course_id}")
+def delete_user_course(user_id: str, course_id: int):
+    users = data_store.users
+    courses = data_store.courses
+    user_courses = data_store.user_courses
+
+    if not any(user['id'] == user_id for user in users):
+        raise HTTPException(status_code=404, detail=f"Пользователь {user_id} не найден")
+
+    if not any(course['id'] == course_id for course in courses):
+        raise HTTPException(status_code=404, detail=f"Курс с ID {course_id} не найден")
+
+    # Находим запись для удаления
+    initial_len = len(user_courses)
+    user_courses[:] = [uc for uc in user_courses if not (uc['user_id'] == user_id and uc['course_id'] == course_id)]
+
+    if len(user_courses) == initial_len:
+        raise HTTPException(status_code=404, detail=f"Запись о курсе {course_id} для пользователя {user_id} не найдена")
+
+    save_raw_data(courses, users, user_courses)
+
+    if not train_and_save_model(courses, user_courses, users, MODELS_DIR):
+        print("Предупреждение: не удалось переобучить модель")
+
+    return {"message": f"Запись о курсе {course_id} для пользователя {user_id} успешно удалена"}

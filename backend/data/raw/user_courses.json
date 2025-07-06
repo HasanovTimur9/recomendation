@@ -19951,7 +19951,14 @@
     },
     {
         "user_id": "user205",
-        "course_id": 6,
+        "course_id": 7,
+        "completed": true,
+        "score": 5,
+        "performance": 100
+    },
+    {
+        "user_id": "user205",
+        "course_id": 15,
         "completed": true,
         "score": 5,
         "performance": 100
