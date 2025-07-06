@@ -1,193 +1,16 @@
 [
     {
         "id": 1,
-        "name": "Devops for Intermediate",
-        "difficulty": "intermediate",
+        "name": "Databases for Beginner",
+        "difficulty": "beginner",
         "tags": [
-            "Docker",
-            "cloud-computing"
+            "sql",
+            "databases",
+            "postgreSQL"
         ]
     },
     {
         "id": 2,
-        "name": "Devops for Advanced",
-        "difficulty": "advanced",
-        "tags": [
-            "Docker"
-        ]
-    },
-    {
-        "id": 3,
-        "name": "Programming for Beginner",
-        "difficulty": "beginner",
-        "tags": [
-            "C++",
-            "python"
-        ]
-    },
-    {
-        "id": 4,
-        "name": "Data Science for Advanced",
-        "difficulty": "advanced",
-        "tags": [
-            "computer vision",
-            "NLP",
-            "machine-learning"
-        ]
-    },
-    {
-        "id": 5,
-        "name": "Software Architecture for Intermediate",
-        "difficulty": "intermediate",
-        "tags": [
-            "OOP",
-            "procedural programming"
-        ]
-    },
-    {
-        "id": 6,
-        "name": "Data Science for Beginner",
-        "difficulty": "beginner",
-        "tags": [
-            "NLP"
-        ]
-    },
-    {
-        "id": 7,
-        "name": "Software Architecture for Intermediate",
-        "difficulty": "intermediate",
-        "tags": [
-            "procedural programming",
-            "functional programming",
-            "OOP"
-        ]
-    },
-    {
-        "id": 8,
-        "name": "Software Architecture for Advanced",
-        "difficulty": "advanced",
-        "tags": [
-            "procedural programming",
-            "OOP",
-            "functional programming"
-        ]
-    },
-    {
-        "id": 9,
-        "name": "Programming for Advanced",
-        "difficulty": "advanced",
-        "tags": [
-            "python",
-            "GoLang"
-        ]
-    },
-    {
-        "id": 10,
-        "name": "Databases for Advanced",
-        "difficulty": "advanced",
-        "tags": [
-            "databases",
-            "sql"
-        ]
-    },
-    {
-        "id": 11,
-        "name": "Cybersecurity for Advanced",
-        "difficulty": "advanced",
-        "tags": [
-            "backend",
-            "software architecture"
-        ]
-    },
-    {
-        "id": 12,
-        "name": "Software Architecture for Beginner",
-        "difficulty": "beginner",
-        "tags": [
-            "procedural programming",
-            "functional programming",
-            "OOP"
-        ]
-    },
-    {
-        "id": 13,
-        "name": "Web Development for Advanced",
-        "difficulty": "advanced",
-        "tags": [
-            "html"
-        ]
-    },
-    {
-        "id": 14,
-        "name": "Testing for Advanced",
-        "difficulty": "advanced",
-        "tags": [
-            "integration tests"
-        ]
-    },
-    {
-        "id": 15,
-        "name": "Cybersecurity for Advanced",
-        "difficulty": "advanced",
-        "tags": [
-            "anti-cheats"
-        ]
-    },
-    {
-        "id": 16,
-        "name": "Web Development for Beginner",
-        "difficulty": "beginner",
-        "tags": [
-            "backend"
-        ]
-    },
-    {
-        "id": 17,
-        "name": "Devops for Advanced",
-        "difficulty": "advanced",
-        "tags": [
-            "Docker",
-            "CI/CD",
-            "cloud-computing"
-        ]
-    },
-    {
-        "id": 18,
-        "name": "Software Architecture for Beginner",
-        "difficulty": "beginner",
-        "tags": [
-            "OOP"
-        ]
-    },
-    {
-        "id": 19,
-        "name": "Databases for Intermediate",
-        "difficulty": "intermediate",
-        "tags": [
-            "databases",
-            "sql"
-        ]
-    },
-    {
-        "id": 20,
-        "name": "Devops for Intermediate",
-        "difficulty": "intermediate",
-        "tags": [
-            "CI/CD",
-            "devops",
-            "cloud-computing"
-        ]
-    },
-    {
-        "id": 21,
-        "name": "Web Development for Intermediate",
-        "difficulty": "intermediate",
-        "tags": [
-            "backend"
-        ]
-    },
-    {
-        "id": 22,
         "name": "Cybersecurity for Advanced",
         "difficulty": "advanced",
         "tags": [
@@ -196,34 +19,328 @@
         ]
     },
     {
-        "id": 23,
-        "name": "Software Architecture for Advanced",
+        "id": 3,
+        "name": "Testing for Advanced",
         "difficulty": "advanced",
         "tags": [
-            "OOP",
-            "functional programming"
+            "load test",
+            "manual testing",
+            "auto-tests"
         ]
     },
     {
-        "id": 24,
-        "name": "Web Development for Advanced",
-        "difficulty": "advanced",
-        "tags": [
-            "javascript"
-        ]
-    },
-    {
-        "id": 25,
-        "name": "Web Development for Intermediate",
+        "id": 4,
+        "name": "Devops for Intermediate",
         "difficulty": "intermediate",
         "tags": [
-            "javascript",
-            "frontend",
+            "cloud-computing",
+            "devops"
+        ]
+    },
+    {
+        "id": 5,
+        "name": "Software Architecture for Beginner",
+        "difficulty": "beginner",
+        "tags": [
+            "procedural programming"
+        ]
+    },
+    {
+        "id": 6,
+        "name": "Cybersecurity for Advanced",
+        "difficulty": "advanced",
+        "tags": [
+            "mobile-development",
+            "software architecture",
             "backend"
         ]
     },
     {
+        "id": 7,
+        "name": "Testing for Beginner",
+        "difficulty": "beginner",
+        "tags": [
+            "auto-tests",
+            "integration tests",
+            "load test"
+        ]
+    },
+    {
+        "id": 8,
+        "name": "Web Development for Intermediate",
+        "difficulty": "intermediate",
+        "tags": [
+            "backend",
+            "html",
+            "javascript"
+        ]
+    },
+    {
+        "id": 9,
+        "name": "Web Development for Advanced",
+        "difficulty": "advanced",
+        "tags": [
+            "frontend",
+            "html"
+        ]
+    },
+    {
+        "id": 10,
+        "name": "Software Architecture for Intermediate",
+        "difficulty": "intermediate",
+        "tags": [
+            "functional programming"
+        ]
+    },
+    {
+        "id": 11,
+        "name": "Testing for Beginner",
+        "difficulty": "beginner",
+        "tags": [
+            "integration tests",
+            "load test"
+        ]
+    },
+    {
+        "id": 12,
+        "name": "Web Development for Advanced",
+        "difficulty": "advanced",
+        "tags": [
+            "javascript",
+            "html"
+        ]
+    },
+    {
+        "id": 13,
+        "name": "Devops for Beginner",
+        "difficulty": "beginner",
+        "tags": [
+            "Docker"
+        ]
+    },
+    {
+        "id": 14,
+        "name": "Web Development for Beginner",
+        "difficulty": "beginner",
+        "tags": [
+            "html",
+            "css",
+            "frontend"
+        ]
+    },
+    {
+        "id": 15,
+        "name": "Testing for Intermediate",
+        "difficulty": "intermediate",
+        "tags": [
+            "manual testing",
+            "auto-tests",
+            "load test"
+        ]
+    },
+    {
+        "id": 16,
+        "name": "Web Development for Intermediate",
+        "difficulty": "intermediate",
+        "tags": [
+            "css",
+            "html",
+            "backend"
+        ]
+    },
+    {
+        "id": 17,
+        "name": "Data Science for Advanced",
+        "difficulty": "advanced",
+        "tags": [
+            "NLP",
+            "data-science",
+            "machine-learning"
+        ]
+    },
+    {
+        "id": 18,
+        "name": "Programming for Advanced",
+        "difficulty": "advanced",
+        "tags": [
+            "C#"
+        ]
+    },
+    {
+        "id": 19,
+        "name": "Software Architecture for Intermediate",
+        "difficulty": "intermediate",
+        "tags": [
+            "functional programming",
+            "OOP",
+            "procedural programming"
+        ]
+    },
+    {
+        "id": 20,
+        "name": "Databases for Advanced",
+        "difficulty": "advanced",
+        "tags": [
+            "sql"
+        ]
+    },
+    {
+        "id": 21,
+        "name": "Databases for Intermediate",
+        "difficulty": "intermediate",
+        "tags": [
+            "sql",
+            "databases",
+            "postgreSQL"
+        ]
+    },
+    {
+        "id": 22,
+        "name": "Testing for Beginner",
+        "difficulty": "beginner",
+        "tags": [
+            "manual testing",
+            "load test"
+        ]
+    },
+    {
+        "id": 23,
+        "name": "Web Development for Intermediate",
+        "difficulty": "intermediate",
+        "tags": [
+            "web-development",
+            "css",
+            "javascript"
+        ]
+    },
+    {
+        "id": 24,
+        "name": "Data Science for Intermediate",
+        "difficulty": "intermediate",
+        "tags": [
+            "machine-learning",
+            "NLP"
+        ]
+    },
+    {
+        "id": 25,
+        "name": "Databases for Intermediate",
+        "difficulty": "intermediate",
+        "tags": [
+            "postgreSQL",
+            "sql"
+        ]
+    },
+    {
         "id": 26,
+        "name": "Programming for Advanced",
+        "difficulty": "advanced",
+        "tags": [
+            "GoLang"
+        ]
+    },
+    {
+        "id": 27,
+        "name": "Software Architecture for Intermediate",
+        "difficulty": "intermediate",
+        "tags": [
+            "procedural programming",
+            "functional programming"
+        ]
+    },
+    {
+        "id": 28,
+        "name": "Devops for Beginner",
+        "difficulty": "beginner",
+        "tags": [
+            "cloud-computing",
+            "devops",
+            "CI/CD"
+        ]
+    },
+    {
+        "id": 29,
+        "name": "Programming for Intermediate",
+        "difficulty": "intermediate",
+        "tags": [
+            "async programming",
+            "python"
+        ]
+    },
+    {
+        "id": 30,
+        "name": "Web Development for Intermediate",
+        "difficulty": "intermediate",
+        "tags": [
+            "backend"
+        ]
+    },
+    {
+        "id": 31,
+        "name": "Data Science for Intermediate",
+        "difficulty": "intermediate",
+        "tags": [
+            "machine-learning",
+            "computer vision"
+        ]
+    },
+    {
+        "id": 32,
+        "name": "Software Architecture for Advanced",
+        "difficulty": "advanced",
+        "tags": [
+            "functional programming",
+            "procedural programming"
+        ]
+    },
+    {
+        "id": 33,
+        "name": "Software Architecture for Beginner",
+        "difficulty": "beginner",
+        "tags": [
+            "procedural programming",
+            "functional programming",
+            "OOP"
+        ]
+    },
+    {
+        "id": 34,
+        "name": "Data Science for Beginner",
+        "difficulty": "beginner",
+        "tags": [
+            "computer vision",
+            "data-science"
+        ]
+    },
+    {
+        "id": 35,
+        "name": "Software Architecture for Advanced",
+        "difficulty": "advanced",
+        "tags": [
+            "OOP",
+            "procedural programming",
+            "functional programming"
+        ]
+    },
+    {
+        "id": 36,
+        "name": "Databases for Beginner",
+        "difficulty": "beginner",
+        "tags": [
+            "sql",
+            "databases"
+        ]
+    },
+    {
+        "id": 37,
+        "name": "Software Architecture for Advanced",
+        "difficulty": "advanced",
+        "tags": [
+            "functional programming"
+        ]
+    },
+    {
+        "id": 38,
         "name": "Web Development for Intermediate",
         "difficulty": "intermediate",
         "tags": [
@@ -232,180 +349,77 @@
         ]
     },
     {
-        "id": 27,
-        "name": "Testing for Intermediate",
-        "difficulty": "intermediate",
-        "tags": [
-            "load test",
-            "auto-tests"
-        ]
-    },
-    {
-        "id": 28,
-        "name": "Web Development for Intermediate",
-        "difficulty": "intermediate",
-        "tags": [
-            "frontend",
-            "backend",
-            "html"
-        ]
-    },
-    {
-        "id": 29,
-        "name": "Data Science for Advanced",
-        "difficulty": "advanced",
-        "tags": [
-            "data-science"
-        ]
-    },
-    {
-        "id": 30,
-        "name": "Databases for Beginner",
-        "difficulty": "beginner",
-        "tags": [
-            "sql"
-        ]
-    },
-    {
-        "id": 31,
-        "name": "Software Architecture for Beginner",
-        "difficulty": "beginner",
-        "tags": [
-            "OOP",
-            "procedural programming"
-        ]
-    },
-    {
-        "id": 32,
-        "name": "Devops for Beginner",
-        "difficulty": "beginner",
-        "tags": [
-            "CI/CD",
-            "devops"
-        ]
-    },
-    {
-        "id": 33,
-        "name": "Software Architecture for Advanced",
-        "difficulty": "advanced",
-        "tags": [
-            "OOP",
-            "procedural programming"
-        ]
-    },
-    {
-        "id": 34,
-        "name": "Testing for Beginner",
-        "difficulty": "beginner",
-        "tags": [
-            "load test",
-            "auto-tests",
-            "integration tests"
-        ]
-    },
-    {
-        "id": 35,
-        "name": "Data Science for Beginner",
-        "difficulty": "beginner",
-        "tags": [
-            "NLP",
-            "machine-learning",
-            "computer vision"
-        ]
-    },
-    {
-        "id": 36,
-        "name": "Programming for Beginner",
-        "difficulty": "beginner",
-        "tags": [
-            "async programming",
-            "C#",
-            "C++"
-        ]
-    },
-    {
-        "id": 37,
-        "name": "Testing for Beginner",
-        "difficulty": "beginner",
-        "tags": [
-            "load test",
-            "manual testing",
-            "integration tests"
-        ]
-    },
-    {
-        "id": 38,
-        "name": "Testing for Beginner",
-        "difficulty": "beginner",
-        "tags": [
-            "auto-tests",
-            "load test"
-        ]
-    },
-    {
         "id": 39,
-        "name": "Devops for Beginner",
-        "difficulty": "beginner",
+        "name": "Web Development for Advanced",
+        "difficulty": "advanced",
         "tags": [
-            "devops",
-            "cloud-computing"
+            "javascript",
+            "css"
         ]
     },
     {
         "id": 40,
-        "name": "Web Development for Beginner",
+        "name": "Testing for Beginner",
         "difficulty": "beginner",
         "tags": [
-            "backend",
-            "html"
+            "integration tests"
         ]
     },
     {
         "id": 41,
-        "name": "Data Science for Beginner",
-        "difficulty": "beginner",
-        "tags": [
-            "computer vision",
-            "NLP"
-        ]
-    },
-    {
-        "id": 42,
-        "name": "Data Science for Advanced",
-        "difficulty": "advanced",
-        "tags": [
-            "NLP",
-            "data-science"
-        ]
-    },
-    {
-        "id": 43,
-        "name": "Cybersecurity for Intermediate",
+        "name": "Web Development for Intermediate",
         "difficulty": "intermediate",
         "tags": [
-            "software architecture",
-            "backend"
-        ]
-    },
-    {
-        "id": 44,
-        "name": "Cybersecurity for Beginner",
-        "difficulty": "beginner",
-        "tags": [
-            "mobile-development"
-        ]
-    },
-    {
-        "id": 45,
-        "name": "Web Development for Advanced",
-        "difficulty": "advanced",
-        "tags": [
-            "frontend",
             "html"
         ]
     },
     {
+        "id": 42,
+        "name": "Data Science for Intermediate",
+        "difficulty": "intermediate",
+        "tags": [
+            "data-science",
+            "NLP"
+        ]
+    },
+    {
+        "id": 43,
+        "name": "Software Architecture for Beginner",
+        "difficulty": "beginner",
+        "tags": [
+            "functional programming"
+        ]
+    },
+    {
+        "id": 44,
+        "name": "Data Science for Beginner",
+        "difficulty": "beginner",
+        "tags": [
+            "machine-learning",
+            "data-science",
+            "computer vision"
+        ]
+    },
+    {
+        "id": 45,
+        "name": "Software Architecture for Beginner",
+        "difficulty": "beginner",
+        "tags": [
+            "functional programming",
+            "procedural programming"
+        ]
+    },
+    {
         "id": 46,
+        "name": "Devops for Intermediate",
+        "difficulty": "intermediate",
+        "tags": [
+            "devops",
+            "CI/CD"
+        ]
+    },
+    {
+        "id": 47,
         "name": "Software Architecture for Intermediate",
         "difficulty": "intermediate",
         "tags": [
@@ -413,57 +427,50 @@
         ]
     },
     {
-        "id": 47,
-        "name": "Programming for Beginner",
-        "difficulty": "beginner",
-        "tags": [
-            "GoLang"
-        ]
-    },
-    {
         "id": 48,
-        "name": "Cybersecurity for Beginner",
-        "difficulty": "beginner",
+        "name": "Cybersecurity for Advanced",
+        "difficulty": "advanced",
         "tags": [
-            "anti-cheats",
             "backend",
-            "mobile-development"
+            "software architecture",
+            "anti-cheats"
         ]
     },
     {
         "id": 49,
-        "name": "Databases for Beginner",
-        "difficulty": "beginner",
+        "name": "Testing for Advanced",
+        "difficulty": "advanced",
         "tags": [
-            "databases",
-            "sql"
+            "load test",
+            "integration tests",
+            "auto-tests"
         ]
     },
     {
         "id": 50,
-        "name": "Databases for Beginner",
-        "difficulty": "beginner",
+        "name": "Devops for Advanced",
+        "difficulty": "advanced",
         "tags": [
-            "sql",
-            "postgreSQL",
-            "databases"
+            "cloud-computing"
         ]
     },
     {
         "id": 51,
-        "name": "Programming for Beginner",
+        "name": "Cybersecurity for Beginner",
         "difficulty": "beginner",
         "tags": [
-            "async programming",
-            "python"
+            "backend",
+            "software architecture",
+            "anti-cheats"
         ]
     },
     {
         "id": 52,
-        "name": "Programming for Beginner",
-        "difficulty": "beginner",
+        "name": "Testing for Intermediate",
+        "difficulty": "intermediate",
         "tags": [
-            "C++"
+            "auto-tests",
+            "integration tests"
         ]
     },
     {
@@ -471,194 +478,77 @@
         "name": "Cybersecurity for Beginner",
         "difficulty": "beginner",
         "tags": [
-            "backend",
-            "software architecture"
+            "backend"
         ]
     },
     {
         "id": 54,
-        "name": "Cybersecurity for Advanced",
-        "difficulty": "advanced",
-        "tags": [
-            "backend",
-            "anti-cheats",
-            "mobile-development"
-        ]
-    },
-    {
-        "id": 55,
-        "name": "Programming for Intermediate",
-        "difficulty": "intermediate",
-        "tags": [
-            "async programming",
-            "C++"
-        ]
-    },
-    {
-        "id": 56,
-        "name": "Software Architecture for Intermediate",
-        "difficulty": "intermediate",
-        "tags": [
-            "OOP"
-        ]
-    },
-    {
-        "id": 57,
-        "name": "Data Science for Intermediate",
-        "difficulty": "intermediate",
-        "tags": [
-            "NLP"
-        ]
-    },
-    {
-        "id": 58,
-        "name": "Programming for Advanced",
-        "difficulty": "advanced",
-        "tags": [
-            "python",
-            "C#",
-            "C++"
-        ]
-    },
-    {
-        "id": 59,
-        "name": "Web Development for Intermediate",
-        "difficulty": "intermediate",
-        "tags": [
-            "web-development",
-            "html"
-        ]
-    },
-    {
-        "id": 60,
-        "name": "Web Development for Beginner",
-        "difficulty": "beginner",
-        "tags": [
-            "css",
-            "frontend",
-            "html"
-        ]
-    },
-    {
-        "id": 61,
-        "name": "Devops for Intermediate",
-        "difficulty": "intermediate",
-        "tags": [
-            "devops",
-            "CI/CD",
-            "Docker"
-        ]
-    },
-    {
-        "id": 62,
-        "name": "Data Science for Intermediate",
-        "difficulty": "intermediate",
-        "tags": [
-            "data-science",
-            "machine-learning"
-        ]
-    },
-    {
-        "id": 63,
         "name": "Testing for Intermediate",
         "difficulty": "intermediate",
         "tags": [
-            "integration tests",
+            "manual testing",
             "load test"
         ]
     },
     {
-        "id": 64,
-        "name": "Data Science for Advanced",
+        "id": 55,
+        "name": "Programming for Advanced",
         "difficulty": "advanced",
         "tags": [
-            "computer vision",
-            "machine-learning"
+            "GoLang",
+            "async programming",
+            "python"
         ]
     },
     {
-        "id": 65,
-        "name": "Cybersecurity for Advanced",
-        "difficulty": "advanced",
+        "id": 56,
+        "name": "Programming for Intermediate",
+        "difficulty": "intermediate",
         "tags": [
-            "anti-cheats",
-            "software architecture"
+            "async programming"
         ]
     },
     {
-        "id": 66,
+        "id": 57,
+        "name": "Software Architecture for Intermediate",
+        "difficulty": "intermediate",
+        "tags": [
+            "OOP",
+            "functional programming"
+        ]
+    },
+    {
+        "id": 58,
+        "name": "Web Development for Intermediate",
+        "difficulty": "intermediate",
+        "tags": [
+            "html",
+            "frontend",
+            "web-development"
+        ]
+    },
+    {
+        "id": 59,
         "name": "Testing for Intermediate",
         "difficulty": "intermediate",
         "tags": [
-            "integration tests",
-            "auto-tests",
-            "manual testing"
-        ]
-    },
-    {
-        "id": 67,
-        "name": "Cybersecurity for Beginner",
-        "difficulty": "beginner",
-        "tags": [
-            "software architecture"
-        ]
-    },
-    {
-        "id": 68,
-        "name": "Testing for Advanced",
-        "difficulty": "advanced",
-        "tags": [
-            "load test",
+            "manual testing",
             "integration tests",
             "auto-tests"
         ]
     },
     {
-        "id": 69,
-        "name": "Data Science for Beginner",
-        "difficulty": "beginner",
-        "tags": [
-            "machine-learning",
-            "data-science"
-        ]
-    },
-    {
-        "id": 70,
-        "name": "Databases for Intermediate",
-        "difficulty": "intermediate",
-        "tags": [
-            "sql"
-        ]
-    },
-    {
-        "id": 71,
-        "name": "Testing for Intermediate",
-        "difficulty": "intermediate",
-        "tags": [
-            "manual testing"
-        ]
-    },
-    {
-        "id": 72,
-        "name": "Devops for Beginner",
-        "difficulty": "beginner",
-        "tags": [
-            "devops",
-            "CI/CD",
-            "cloud-computing"
-        ]
-    },
-    {
-        "id": 73,
-        "name": "Devops for Advanced",
+        "id": 60,
+        "name": "Testing for Advanced",
         "difficulty": "advanced",
         "tags": [
-            "cloud-computing",
-            "CI/CD"
+            "manual testing",
+            "integration tests",
+            "auto-tests"
         ]
     },
     {
-        "id": 74,
+        "id": 61,
         "name": "Cybersecurity for Advanced",
         "difficulty": "advanced",
         "tags": [
@@ -666,83 +556,54 @@
         ]
     },
     {
-        "id": 75,
-        "name": "Cybersecurity for Advanced",
-        "difficulty": "advanced",
+        "id": 62,
+        "name": "Devops for Beginner",
+        "difficulty": "beginner",
         "tags": [
-            "backend",
-            "anti-cheats"
+            "devops",
+            "cloud-computing"
         ]
     },
     {
-        "id": 76,
-        "name": "Web Development for Intermediate",
-        "difficulty": "intermediate",
-        "tags": [
-            "web-development"
-        ]
-    },
-    {
-        "id": 77,
-        "name": "Testing for Advanced",
-        "difficulty": "advanced",
-        "tags": [
-            "integration tests",
-            "manual testing"
-        ]
-    },
-    {
-        "id": 78,
-        "name": "Testing for Advanced",
-        "difficulty": "advanced",
-        "tags": [
-            "load test",
-            "integration tests",
-            "manual testing"
-        ]
-    },
-    {
-        "id": 79,
+        "id": 63,
         "name": "Software Architecture for Beginner",
         "difficulty": "beginner",
         "tags": [
-            "functional programming",
-            "OOP"
+            "OOP",
+            "procedural programming"
         ]
     },
     {
-        "id": 80,
-        "name": "Cybersecurity for Advanced",
+        "id": 64,
+        "name": "Databases for Advanced",
         "difficulty": "advanced",
         "tags": [
-            "software architecture",
-            "mobile-development",
-            "anti-cheats"
+            "postgreSQL",
+            "databases",
+            "sql"
         ]
     },
     {
-        "id": 81,
-        "name": "Data Science for Advanced",
-        "difficulty": "advanced",
+        "id": 65,
+        "name": "Testing for Beginner",
+        "difficulty": "beginner",
         "tags": [
-            "NLP",
-            "machine-learning",
-            "data-science"
+            "manual testing"
         ]
     },
     {
-        "id": 82,
+        "id": 66,
         "name": "Web Development for Advanced",
         "difficulty": "advanced",
         "tags": [
-            "frontend",
             "javascript",
-            "css",
+            "frontend",
+            "backend",
             "html"
         ]
     },
     {
-        "id": 83,
+        "id": 67,
         "name": "Databases for Beginner",
         "difficulty": "beginner",
         "tags": [
@@ -751,69 +612,42 @@
         ]
     },
     {
-        "id": 84,
-        "name": "Devops for Intermediate",
-        "difficulty": "intermediate",
-        "tags": [
-            "cloud-computing",
-            "CI/CD"
-        ]
-    },
-    {
-        "id": 85,
-        "name": "Cybersecurity for Intermediate",
-        "difficulty": "intermediate",
-        "tags": [
-            "backend",
-            "mobile-development",
-            "software architecture"
-        ]
-    },
-    {
-        "id": 86,
-        "name": "Devops for Intermediate",
-        "difficulty": "intermediate",
-        "tags": [
-            "devops"
-        ]
-    },
-    {
-        "id": 87,
-        "name": "Programming for Intermediate",
-        "difficulty": "intermediate",
-        "tags": [
-            "python"
-        ]
-    },
-    {
-        "id": 88,
-        "name": "Web Development for Intermediate",
-        "difficulty": "intermediate",
-        "tags": [
-            "backend",
-            "html"
-        ]
-    },
-    {
-        "id": 89,
-        "name": "Testing for Intermediate",
-        "difficulty": "intermediate",
-        "tags": [
-            "integration tests",
-            "load test",
-            "manual testing"
-        ]
-    },
-    {
-        "id": 90,
+        "id": 68,
         "name": "Software Architecture for Advanced",
         "difficulty": "advanced",
         "tags": [
+            "OOP",
             "functional programming"
         ]
     },
     {
-        "id": 91,
+        "id": 69,
+        "name": "Programming for Beginner",
+        "difficulty": "beginner",
+        "tags": [
+            "async programming",
+            "GoLang"
+        ]
+    },
+    {
+        "id": 70,
+        "name": "Devops for Advanced",
+        "difficulty": "advanced",
+        "tags": [
+            "Docker"
+        ]
+    },
+    {
+        "id": 71,
+        "name": "Web Development for Intermediate",
+        "difficulty": "intermediate",
+        "tags": [
+            "web-development",
+            "html"
+        ]
+    },
+    {
+        "id": 72,
         "name": "Software Architecture for Advanced",
         "difficulty": "advanced",
         "tags": [
@@ -821,144 +655,314 @@
         ]
     },
     {
-        "id": 92,
+        "id": 73,
+        "name": "Programming for Intermediate",
+        "difficulty": "intermediate",
+        "tags": [
+            "C++"
+        ]
+    },
+    {
+        "id": 74,
+        "name": "Testing for Intermediate",
+        "difficulty": "intermediate",
+        "tags": [
+            "auto-tests"
+        ]
+    },
+    {
+        "id": 75,
+        "name": "Web Development for Intermediate",
+        "difficulty": "intermediate",
+        "tags": [
+            "backend",
+            "css",
+            "frontend",
+            "html"
+        ]
+    },
+    {
+        "id": 76,
+        "name": "Programming for Intermediate",
+        "difficulty": "intermediate",
+        "tags": [
+            "C++",
+            "python",
+            "GoLang"
+        ]
+    },
+    {
+        "id": 77,
+        "name": "Devops for Intermediate",
+        "difficulty": "intermediate",
+        "tags": [
+            "cloud-computing"
+        ]
+    },
+    {
+        "id": 78,
+        "name": "Programming for Advanced",
+        "difficulty": "advanced",
+        "tags": [
+            "python"
+        ]
+    },
+    {
+        "id": 79,
+        "name": "Programming for Advanced",
+        "difficulty": "advanced",
+        "tags": [
+            "python",
+            "async programming",
+            "C++"
+        ]
+    },
+    {
+        "id": 80,
         "name": "Web Development for Advanced",
         "difficulty": "advanced",
         "tags": [
-            "web-development",
             "html",
-            "frontend"
+            "css"
         ]
     },
     {
-        "id": 93,
-        "name": "Databases for Intermediate",
-        "difficulty": "intermediate",
-        "tags": [
-            "postgreSQL",
-            "databases",
-            "sql"
-        ]
-    },
-    {
-        "id": 94,
-        "name": "Data Science for Advanced",
+        "id": 81,
+        "name": "Web Development for Advanced",
         "difficulty": "advanced",
         "tags": [
-            "NLP",
+            "css",
+            "frontend",
+            "html"
+        ]
+    },
+    {
+        "id": 82,
+        "name": "Testing for Intermediate",
+        "difficulty": "intermediate",
+        "tags": [
+            "integration tests",
+            "auto-tests",
+            "load test"
+        ]
+    },
+    {
+        "id": 83,
+        "name": "Devops for Beginner",
+        "difficulty": "beginner",
+        "tags": [
+            "devops"
+        ]
+    },
+    {
+        "id": 84,
+        "name": "Software Architecture for Intermediate",
+        "difficulty": "intermediate",
+        "tags": [
+            "OOP"
+        ]
+    },
+    {
+        "id": 85,
+        "name": "Web Development for Advanced",
+        "difficulty": "advanced",
+        "tags": [
+            "frontend",
+            "html",
+            "javascript"
+        ]
+    },
+    {
+        "id": 86,
+        "name": "Testing for Intermediate",
+        "difficulty": "intermediate",
+        "tags": [
+            "manual testing"
+        ]
+    },
+    {
+        "id": 87,
+        "name": "Programming for Beginner",
+        "difficulty": "beginner",
+        "tags": [
+            "C++",
+            "python",
+            "async programming"
+        ]
+    },
+    {
+        "id": 88,
+        "name": "Programming for Intermediate",
+        "difficulty": "intermediate",
+        "tags": [
+            "GoLang",
+            "C#",
+            "async programming"
+        ]
+    },
+    {
+        "id": 89,
+        "name": "Cybersecurity for Advanced",
+        "difficulty": "advanced",
+        "tags": [
+            "software architecture"
+        ]
+    },
+    {
+        "id": 90,
+        "name": "Cybersecurity for Intermediate",
+        "difficulty": "intermediate",
+        "tags": [
+            "backend",
+            "anti-cheats"
+        ]
+    },
+    {
+        "id": 91,
+        "name": "Data Science for Beginner",
+        "difficulty": "beginner",
+        "tags": [
             "machine-learning"
         ]
     },
     {
-        "id": 95,
-        "name": "Web Development for Advanced",
+        "id": 92,
+        "name": "Testing for Beginner",
+        "difficulty": "beginner",
+        "tags": [
+            "auto-tests",
+            "load test"
+        ]
+    },
+    {
+        "id": 93,
+        "name": "Testing for Beginner",
+        "difficulty": "beginner",
+        "tags": [
+            "manual testing",
+            "auto-tests"
+        ]
+    },
+    {
+        "id": 94,
+        "name": "Testing for Advanced",
         "difficulty": "advanced",
         "tags": [
+            "manual testing",
+            "load test",
+            "integration tests"
+        ]
+    },
+    {
+        "id": 95,
+        "name": "Web Development for Beginner",
+        "difficulty": "beginner",
+        "tags": [
+            "web-development",
+            "backend",
             "frontend"
         ]
     },
     {
         "id": 96,
+        "name": "Databases for Intermediate",
+        "difficulty": "intermediate",
+        "tags": [
+            "databases",
+            "sql"
+        ]
+    },
+    {
+        "id": 97,
+        "name": "Programming for Beginner",
+        "difficulty": "beginner",
+        "tags": [
+            "C#"
+        ]
+    },
+    {
+        "id": 98,
+        "name": "Data Science for Advanced",
+        "difficulty": "advanced",
+        "tags": [
+            "data-science",
+            "NLP",
+            "computer vision"
+        ]
+    },
+    {
+        "id": 99,
+        "name": "Testing for Beginner",
+        "difficulty": "beginner",
+        "tags": [
+            "integration tests",
+            "manual testing"
+        ]
+    },
+    {
+        "id": 100,
+        "name": "Software Architecture for Intermediate",
+        "difficulty": "intermediate",
+        "tags": [
+            "procedural programming",
+            "OOP"
+        ]
+    },
+    {
+        "id": 101,
+        "name": "Data Science for Intermediate",
+        "difficulty": "intermediate",
+        "tags": [
+            "NLP",
+            "machine-learning",
+            "data-science"
+        ]
+    },
+    {
+        "id": 102,
+        "name": "Programming for Intermediate",
+        "difficulty": "intermediate",
+        "tags": [
+            "C++",
+            "python",
+            "C#"
+        ]
+    },
+    {
+        "id": 103,
+        "name": "Cybersecurity for Intermediate",
+        "difficulty": "intermediate",
+        "tags": [
+            "anti-cheats"
+        ]
+    },
+    {
+        "id": 104,
+        "name": "Cybersecurity for Advanced",
+        "difficulty": "advanced",
+        "tags": [
+            "backend",
+            "software architecture"
+        ]
+    },
+    {
+        "id": 105,
+        "name": "Testing for Advanced",
+        "difficulty": "advanced",
+        "tags": [
+            "integration tests",
+            "auto-tests"
+        ]
+    },
+    {
+        "id": 106,
         "name": "Web Development for Advanced",
         "difficulty": "advanced",
         "tags": [
             "backend",
             "css",
-            "web-development",
+            "frontend",
             "html"
-        ]
-    },
-    {
-        "id": 97,
-        "name": "Devops for Beginner",
-        "difficulty": "beginner",
-        "tags": [
-            "CI/CD",
-            "devops",
-            "Docker"
-        ]
-    },
-    {
-        "id": 98,
-        "name": "Web Development for Beginner",
-        "difficulty": "beginner",
-        "tags": [
-            "web-development",
-            "frontend"
-        ]
-    },
-    {
-        "id": 99,
-        "name": "Data Science for Beginner",
-        "difficulty": "beginner",
-        "tags": [
-            "computer vision",
-            "data-science"
-        ]
-    },
-    {
-        "id": 100,
-        "name": "Data Science for Advanced",
-        "difficulty": "advanced",
-        "tags": [
-            "computer vision",
-            "data-science"
-        ]
-    },
-    {
-        "id": 101,
-        "name": "Databases for Advanced",
-        "difficulty": "advanced",
-        "tags": [
-            "databases",
-            "sql",
-            "postgreSQL"
-        ]
-    },
-    {
-        "id": 102,
-        "name": "Web Development for Beginner",
-        "difficulty": "beginner",
-        "tags": [
-            "web-development",
-            "html"
-        ]
-    },
-    {
-        "id": 103,
-        "name": "Cybersecurity for Advanced",
-        "difficulty": "advanced",
-        "tags": [
-            "mobile-development"
-        ]
-    },
-    {
-        "id": 104,
-        "name": "Databases for Intermediate",
-        "difficulty": "intermediate",
-        "tags": [
-            "postgreSQL",
-            "sql"
-        ]
-    },
-    {
-        "id": 105,
-        "name": "Devops for Intermediate",
-        "difficulty": "intermediate",
-        "tags": [
-            "Docker",
-            "cloud-computing",
-            "CI/CD"
-        ]
-    },
-    {
-        "id": 106,
-        "name": "Cybersecurity for Advanced",
-        "difficulty": "advanced",
-        "tags": [
-            "software architecture",
-            "anti-cheats",
-            "backend"
         ]
     },
     {
@@ -967,72 +971,68 @@
         "difficulty": "beginner",
         "tags": [
             "python",
-            "C#",
-            "GoLang"
+            "GoLang",
+            "async programming"
         ]
     },
     {
         "id": 108,
-        "name": "Software Architecture for Beginner",
+        "name": "Devops for Beginner",
         "difficulty": "beginner",
         "tags": [
-            "procedural programming"
+            "devops",
+            "Docker"
         ]
     },
     {
         "id": 109,
-        "name": "Data Science for Intermediate",
-        "difficulty": "intermediate",
+        "name": "Web Development for Advanced",
+        "difficulty": "advanced",
         "tags": [
-            "machine-learning",
-            "NLP",
-            "computer vision"
+            "javascript"
         ]
     },
     {
         "id": 110,
-        "name": "Web Development for Advanced",
+        "name": "Devops for Advanced",
         "difficulty": "advanced",
         "tags": [
-            "css",
-            "frontend",
-            "html"
+            "devops"
         ]
     },
     {
         "id": 111,
-        "name": "Devops for Intermediate",
-        "difficulty": "intermediate",
+        "name": "Data Science for Advanced",
+        "difficulty": "advanced",
         "tags": [
-            "Docker",
-            "devops",
-            "cloud-computing"
+            "computer vision",
+            "NLP"
         ]
     },
     {
         "id": 112,
-        "name": "Programming for Advanced",
-        "difficulty": "advanced",
+        "name": "Devops for Intermediate",
+        "difficulty": "intermediate",
         "tags": [
-            "GoLang"
+            "Docker"
         ]
     },
     {
         "id": 113,
-        "name": "Cybersecurity for Intermediate",
-        "difficulty": "intermediate",
+        "name": "Cybersecurity for Advanced",
+        "difficulty": "advanced",
         "tags": [
-            "backend",
+            "anti-cheats",
             "mobile-development"
         ]
     },
     {
         "id": 114,
-        "name": "Devops for Beginner",
-        "difficulty": "beginner",
+        "name": "Databases for Advanced",
+        "difficulty": "advanced",
         "tags": [
-            "cloud-computing",
-            "CI/CD"
+            "databases",
+            "sql"
         ]
     },
     {
@@ -1041,12 +1041,60 @@
         "difficulty": "advanced",
         "tags": [
             "C++",
-            "async programming",
-            "python"
+            "C#"
         ]
     },
     {
         "id": 116,
+        "name": "Devops for Intermediate",
+        "difficulty": "intermediate",
+        "tags": [
+            "CI/CD",
+            "Docker",
+            "cloud-computing"
+        ]
+    },
+    {
+        "id": 117,
+        "name": "Data Science for Advanced",
+        "difficulty": "advanced",
+        "tags": [
+            "machine-learning",
+            "computer vision",
+            "data-science"
+        ]
+    },
+    {
+        "id": 118,
+        "name": "Programming for Beginner",
+        "difficulty": "beginner",
+        "tags": [
+            "GoLang",
+            "C#",
+            "C++"
+        ]
+    },
+    {
+        "id": 119,
+        "name": "Data Science for Intermediate",
+        "difficulty": "intermediate",
+        "tags": [
+            "data-science",
+            "computer vision"
+        ]
+    },
+    {
+        "id": 120,
+        "name": "Cybersecurity for Advanced",
+        "difficulty": "advanced",
+        "tags": [
+            "backend",
+            "anti-cheats",
+            "mobile-development"
+        ]
+    },
+    {
+        "id": 121,
         "name": "Data Science for Beginner",
         "difficulty": "beginner",
         "tags": [
@@ -1054,113 +1102,65 @@
         ]
     },
     {
-        "id": 117,
-        "name": "Devops for Beginner",
-        "difficulty": "beginner",
-        "tags": [
-            "Docker",
-            "devops"
-        ]
-    },
-    {
-        "id": 118,
-        "name": "Data Science for Advanced",
-        "difficulty": "advanced",
-        "tags": [
-            "computer vision"
-        ]
-    },
-    {
-        "id": 119,
-        "name": "Software Architecture for Intermediate",
-        "difficulty": "intermediate",
-        "tags": [
-            "OOP",
-            "functional programming"
-        ]
-    },
-    {
-        "id": 120,
-        "name": "Cybersecurity for Beginner",
-        "difficulty": "beginner",
-        "tags": [
-            "backend",
-            "software architecture",
-            "mobile-development"
-        ]
-    },
-    {
-        "id": 121,
-        "name": "Testing for Intermediate",
-        "difficulty": "intermediate",
-        "tags": [
-            "load test",
-            "manual testing"
-        ]
-    },
-    {
         "id": 122,
-        "name": "Cybersecurity for Advanced",
-        "difficulty": "advanced",
+        "name": "Cybersecurity for Intermediate",
+        "difficulty": "intermediate",
         "tags": [
-            "mobile-development",
             "software architecture"
         ]
     },
     {
         "id": 123,
-        "name": "Programming for Advanced",
-        "difficulty": "advanced",
-        "tags": [
-            "async programming",
-            "C++"
-        ]
-    },
-    {
-        "id": 124,
-        "name": "Cybersecurity for Beginner",
+        "name": "Testing for Beginner",
         "difficulty": "beginner",
         "tags": [
-            "software architecture",
-            "backend",
-            "anti-cheats"
-        ]
-    },
-    {
-        "id": 125,
-        "name": "Programming for Intermediate",
-        "difficulty": "intermediate",
-        "tags": [
-            "C++",
-            "C#"
-        ]
-    },
-    {
-        "id": 126,
-        "name": "Web Development for Intermediate",
-        "difficulty": "intermediate",
-        "tags": [
-            "html",
-            "javascript",
-            "frontend"
-        ]
-    },
-    {
-        "id": 127,
-        "name": "Testing for Advanced",
-        "difficulty": "advanced",
-        "tags": [
+            "auto-tests",
+            "manual testing",
             "load test"
         ]
     },
     {
-        "id": 128,
+        "id": 124,
+        "name": "Data Science for Intermediate",
+        "difficulty": "intermediate",
+        "tags": [
+            "machine-learning"
+        ]
+    },
+    {
+        "id": 125,
+        "name": "Testing for Advanced",
+        "difficulty": "advanced",
+        "tags": [
+            "manual testing"
+        ]
+    },
+    {
+        "id": 126,
         "name": "Programming for Beginner",
         "difficulty": "beginner",
         "tags": [
+            "async programming",
             "C++",
-            "GoLang",
-            "python"
+            "GoLang"
+        ]
+    },
+    {
+        "id": 127,
+        "name": "Programming for Intermediate",
+        "difficulty": "intermediate",
+        "tags": [
+            "C++",
+            "async programming"
+        ]
+    },
+    {
+        "id": 128,
+        "name": "Web Development for Beginner",
+        "difficulty": "beginner",
+        "tags": [
+            "backend",
+            "html"
         ]
     },
     {
@@ -1168,14 +1168,19 @@
         "name": "Web Development for Intermediate",
         "difficulty": "intermediate",
         "tags": [
-            "frontend",
-            "javascript",
-            "css",
-            "html"
+            "javascript"
         ]
     },
     {
         "id": 130,
+        "name": "Programming for Beginner",
+        "difficulty": "beginner",
+        "tags": [
+            "GoLang"
+        ]
+    },
+    {
+        "id": 131,
         "name": "Databases for Advanced",
         "difficulty": "advanced",
         "tags": [
@@ -1184,21 +1189,12 @@
         ]
     },
     {
-        "id": 131,
-        "name": "Testing for Advanced",
-        "difficulty": "advanced",
-        "tags": [
-            "auto-tests"
-        ]
-    },
-    {
         "id": 132,
-        "name": "Programming for Advanced",
+        "name": "Devops for Advanced",
         "difficulty": "advanced",
         "tags": [
-            "C#",
-            "GoLang",
-            "async programming"
+            "cloud-computing",
+            "CI/CD"
         ]
     },
     {
@@ -1206,158 +1202,165 @@
         "name": "Web Development for Advanced",
         "difficulty": "advanced",
         "tags": [
+            "css",
             "backend",
-            "frontend"
+            "html"
         ]
     },
     {
         "id": 134,
-        "name": "Cybersecurity for Intermediate",
-        "difficulty": "intermediate",
+        "name": "Programming for Beginner",
+        "difficulty": "beginner",
         "tags": [
-            "mobile-development"
+            "python",
+            "C#",
+            "async programming"
         ]
     },
     {
         "id": 135,
-        "name": "Web Development for Advanced",
+        "name": "Testing for Advanced",
         "difficulty": "advanced",
         "tags": [
-            "css",
-            "backend"
+            "load test",
+            "integration tests"
         ]
     },
     {
         "id": 136,
-        "name": "Programming for Beginner",
+        "name": "Cybersecurity for Advanced",
+        "difficulty": "advanced",
+        "tags": [
+            "software architecture",
+            "mobile-development"
+        ]
+    },
+    {
+        "id": 137,
+        "name": "Programming for Advanced",
+        "difficulty": "advanced",
+        "tags": [
+            "C++",
+            "async programming"
+        ]
+    },
+    {
+        "id": 138,
+        "name": "Testing for Beginner",
         "difficulty": "beginner",
+        "tags": [
+            "auto-tests",
+            "integration tests"
+        ]
+    },
+    {
+        "id": 139,
+        "name": "Programming for Intermediate",
+        "difficulty": "intermediate",
         "tags": [
             "python"
         ]
     },
     {
-        "id": 137,
-        "name": "Devops for Intermediate",
-        "difficulty": "intermediate",
-        "tags": [
-            "Docker",
-            "CI/CD"
-        ]
-    },
-    {
-        "id": 138,
-        "name": "Programming for Advanced",
-        "difficulty": "advanced",
-        "tags": [
-            "GoLang",
-            "C++"
-        ]
-    },
-    {
-        "id": 139,
+        "id": 140,
         "name": "Devops for Advanced",
         "difficulty": "advanced",
-        "tags": [
-            "cloud-computing",
-            "CI/CD",
-            "devops"
-        ]
-    },
-    {
-        "id": 140,
-        "name": "Testing for Intermediate",
-        "difficulty": "intermediate",
-        "tags": [
-            "manual testing",
-            "integration tests"
-        ]
-    },
-    {
-        "id": 141,
-        "name": "Web Development for Advanced",
-        "difficulty": "advanced",
-        "tags": [
-            "css",
-            "web-development"
-        ]
-    },
-    {
-        "id": 142,
-        "name": "Data Science for Beginner",
-        "difficulty": "beginner",
-        "tags": [
-            "NLP",
-            "data-science",
-            "machine-learning"
-        ]
-    },
-    {
-        "id": 143,
-        "name": "Cybersecurity for Intermediate",
-        "difficulty": "intermediate",
-        "tags": [
-            "software architecture"
-        ]
-    },
-    {
-        "id": 144,
-        "name": "Devops for Beginner",
-        "difficulty": "beginner",
         "tags": [
             "Docker",
             "cloud-computing"
         ]
     },
     {
-        "id": 145,
-        "name": "Programming for Advanced",
+        "id": 141,
+        "name": "Data Science for Advanced",
         "difficulty": "advanced",
         "tags": [
-            "async programming"
+            "machine-learning",
+            "computer vision"
         ]
     },
     {
-        "id": 146,
-        "name": "Programming for Intermediate",
-        "difficulty": "intermediate",
-        "tags": [
-            "C#",
-            "C++",
-            "GoLang"
-        ]
-    },
-    {
-        "id": 147,
-        "name": "Cybersecurity for Beginner",
+        "id": 142,
+        "name": "Web Development for Beginner",
         "difficulty": "beginner",
         "tags": [
-            "anti-cheats"
+            "javascript",
+            "frontend",
+            "web-development",
+            "html"
         ]
     },
     {
-        "id": 148,
-        "name": "Programming for Advanced",
-        "difficulty": "advanced",
+        "id": 143,
+        "name": "Programming for Beginner",
+        "difficulty": "beginner",
         "tags": [
-            "GoLang",
             "async programming",
             "C++"
         ]
     },
     {
-        "id": 149,
-        "name": "Programming for Advanced",
+        "id": 144,
+        "name": "Software Architecture for Advanced",
         "difficulty": "advanced",
         "tags": [
-            "C#",
-            "C++"
+            "procedural programming",
+            "OOP"
+        ]
+    },
+    {
+        "id": 145,
+        "name": "Cybersecurity for Advanced",
+        "difficulty": "advanced",
+        "tags": [
+            "anti-cheats"
+        ]
+    },
+    {
+        "id": 146,
+        "name": "Web Development for Intermediate",
+        "difficulty": "intermediate",
+        "tags": [
+            "html",
+            "web-development",
+            "css"
+        ]
+    },
+    {
+        "id": 147,
+        "name": "Data Science for Advanced",
+        "difficulty": "advanced",
+        "tags": [
+            "machine-learning",
+            "data-science"
+        ]
+    },
+    {
+        "id": 148,
+        "name": "Data Science for Intermediate",
+        "difficulty": "intermediate",
+        "tags": [
+            "computer vision",
+            "data-science",
+            "NLP"
+        ]
+    },
+    {
+        "id": 149,
+        "name": "Testing for Intermediate",
+        "difficulty": "intermediate",
+        "tags": [
+            "manual testing",
+            "auto-tests"
         ]
     },
     {
         "id": 150,
-        "name": "Programming for Beginner",
-        "difficulty": "beginner",
+        "name": "Programming for Advanced",
+        "difficulty": "advanced",
         "tags": [
+            "C#",
+            "python",
             "async programming"
         ]
     }

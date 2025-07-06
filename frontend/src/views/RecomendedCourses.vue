@@ -23,6 +23,7 @@ interface Course {
   name: string
   difficulty: string
   tags: string[]
+  performance: number
 }
 
 const courses = ref<Course[]>([])

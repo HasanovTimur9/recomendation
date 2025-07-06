@@ -20,7 +20,6 @@ tag_categories = {
 
 difficulties = ["beginner", "intermediate", "advanced"]
 
-
 def get_logical_tags(category, num_tags):
     primary_tags = tag_categories[category]
     tags = random.sample(primary_tags, min(len(primary_tags), num_tags))
@@ -30,12 +29,10 @@ def get_logical_tags(category, num_tags):
         tags.append("html")
     return tags
 
-
 def generate_course_name(category, difficulty):
     category_name = category.replace("-", " ").title()
     difficulty_name = difficulty.title()
     return f"{category_name} for {difficulty_name}"
-
 
 def generate_courses(num_courses):
     courses = []
@@ -80,16 +77,16 @@ possible_tags = [tag for tags in tag_categories.values() for tag in tags]
 num_users = 200
 users = []
 for user_id in range(1, num_users + 1):
-    num_interests = random.randint(1, 3)
+    num_interests = random.randint(2, 4)  # Увеличено число интересов
     interests = random.sample(possible_tags, num_interests)
     users.append({"id": f"user{user_id}", "interests": interests})
 
-# Генерация взаимодействий с учетом сложности и успеваемости
+# Генерация взаимодействий с учетом зависимостей сложности
 user_courses = []
 for user in users:
     user_id = user["id"]
     interests = set(user["interests"])
-    num_interactions = random.randint(5, 10)
+    num_interactions = random.randint(8, 20)  # Увеличено число взаимодействий
 
     # Группируем курсы по категориям для проверки зависимостей сложности
     courses_by_category = {}
@@ -141,9 +138,7 @@ for user in users:
         # Логика доступности курсов
         if beginner_courses:
             available_courses.extend(beginner_courses)
-        if completed_beginner:
-            available_courses.extend(intermediate_courses)
-        if completed_beginner and random.random() < 0.5:  # Увеличен шанс для intermediate до 50%
+        if completed_beginner or random.random() < 0.8:  # 80% шанс для intermediate
             available_courses.extend(intermediate_courses)
         if completed_beginner and completed_intermediate:
             available_courses.extend(advanced_courses)
@@ -160,17 +155,17 @@ for user in users:
 
         course_tags = set(course["tags"])
         common_tags = course_tags.intersection(interests)
-        completion_prob = 0.9 if common_tags else 0.5  # Увеличена вероятность завершения
+        completion_prob = 0.95 if common_tags else 0.7  # Увеличена вероятность завершения
         completed = random.random() < completion_prob
 
         # Генерация успеваемости и оценки
         if completed:
             if common_tags:
-                performance = random.randint(70, 100)  # Увеличены минимальные значения
-                score = random.randint(4, 5)  # Увеличен шанс высоких оценок
+                performance = random.randint(80, 100)  # Высокая успеваемость
+                score = random.choices([4, 5], weights=[0.2, 0.8])[0]  # 80% шанс на score=5
             else:
-                performance = random.randint(50, 90)
-                score = random.randint(2, 4)
+                performance = random.randint(60, 90)
+                score = random.choices([3, 4, 5], weights=[0.1, 0.4, 0.5])[0]  # 50% шанс на score=4, 40% на score=5
         else:
             performance = 0
             score = 0
@@ -179,7 +174,7 @@ for user in users:
             "user_id": user_id,
             "course_id": course["id"],
             "completed": completed,
-            "score": score,
+            "score": 5,
             "performance": performance
         })
 
@@ -198,6 +193,17 @@ df_courses = pd.DataFrame(courses)
 df_users = pd.DataFrame(users)
 df_user_courses = pd.DataFrame(user_courses)
 
+# Статистика по данным
 print(f"Количество курсов: {len(df_courses)}")
 print(f"Количество пользователей: {len(df_users)}")
 print(f"Количество взаимодействий: {len(df_user_courses)}")
+print(f"Количество завершенных курсов: {len(df_user_courses[df_user_courses['completed']])}")
+print(
+    f"Количество курсов с score >= 4: {len(df_user_courses[(df_user_courses['completed']) & (df_user_courses['score'] >= 4)])}")
+print(
+    f"Количество курсов с performance >= 60: {len(df_user_courses[(df_user_courses['completed']) & (df_user_courses['performance'] >= 60)])}")
+print(f"Распределение score:\n{df_user_courses[df_user_courses['completed']]['score'].value_counts().to_dict()}")
+print(
+    f"Распределение performance (для завершенных):\n{df_user_courses[df_user_courses['completed']]['performance'].describe().to_dict()}")
+print(
+    f"Распределение курсов по категориям:\n{df_courses['name'].apply(lambda x: x.split(' for ')[0]).value_counts().to_dict()}")

@@ -1,4 +1,3 @@
-from backend.data.generate_data_to_json import user_courses
 from backend.ml.training import prepare_data, train_model
 from backend.app.api import data_store
 from backend.app.api import file_manager
@@ -8,10 +7,6 @@ import os
 MODELS_PATH = "C:/Users/Hasan/OneDrive/Рабочий стол/recomendation/recomendation/backend/ml/models"
 
 courses, users, user_courses = file_manager.load_raw_data()
-
-#courses = data_store.courses
-#users = data_store.users
-#user_courses = data_store.user_courses
 
 model_dir = MODELS_PATH
 os.makedirs(model_dir, exist_ok=True)
