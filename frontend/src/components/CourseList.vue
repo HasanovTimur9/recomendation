@@ -13,7 +13,7 @@
           {{ tag }}<span v-if="idx < course.tags.length - 1">, </span>
         </span>
       </p>
-      <p class="text-sm text-gray-600">Оценка за курс: {{ course.performance }}</p>
+      <p v-if="course.performance !== null" class="text-sm text-gray-600">Оценка за курс: {{ course.performance }}</p>
 
       <div class="mt-2">
         <slot :course="course" />

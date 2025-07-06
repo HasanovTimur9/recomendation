@@ -37,7 +37,7 @@ onMounted(async () => {
 async function markAsPassed(course: Course) {
   const raw = prompt(`Введите вашу оценку, по итогу прохождения курса "${course.name}" (от 0 до 5):`)
   const score = Number(raw)
-  const raw2 = prompt(`Введите вашу оценку курсу "${course.name}", на сколько вам понравилось и было полезно (от 0 до 5):`)
+  const raw2 = prompt(`Введите вашу оценку курсу "${course.name}", на сколько вам понравилось и было полезно (от 0 до 100):`)
   const performance = Number(raw2)
 
   let result = await api.post('/user_courses', {
