@@ -6,6 +6,7 @@
         :key="course.id"
     >
       <h3 class="text-lg font-semibold">{{ course.name }}</h3>
+      <p class="text-sm text-gray-600">{{ course.description }}</p>
       <p class="text-sm text-gray-600">Сложность: {{ course.difficulty }}</p>
       <p class="text-sm text-gray-600">
         Теги:
@@ -27,6 +28,7 @@ defineProps<{
   courses: {
     id: number
     name: string
+    description: string
     difficulty: string
     tags: string[]
     performance: number

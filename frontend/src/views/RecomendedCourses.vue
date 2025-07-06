@@ -21,6 +21,7 @@ import { useRouter } from 'vue-router'
 interface Course {
   id: number
   name: string
+  description: string
   difficulty: string
   tags: string[]
   performance: number
