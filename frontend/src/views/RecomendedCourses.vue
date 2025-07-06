@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h2>Непройденные курсы</h2>
+    <h2>Рекомендации курсов</h2>
     <button @click="router.push('/unpassed')">Непройденные курсы</button>
     <button @click="router.push('/passed')">Пройденные курсы</button>
     <button @click="logout">Выйти</button>

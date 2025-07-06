@@ -7,19 +7,15 @@ COURSES_PATH = "C:/Users/Hasan/OneDrive/Рабочий стол/recomendation/re
 USERS_PATH = "C:/Users/Hasan/OneDrive/Рабочий стол/recomendation/recomendation/backend/data/raw/users.json"
 USER_COURSES_PATH = "C:/Users/Hasan/OneDrive/Рабочий стол/recomendation/recomendation/backend/data/raw/user_courses.json"
 
-possible_tags = [
-    "python", "data-science", "machine-learning", "web-development", "databases",
-    "cloud-computing", "devops", "cybersecurity", "frontend", "backend",
-    "mobile-development", "game-development", "sql", "javascript", "html", "css"
-]
-
 tag_categories = {
-    "programming": ["python", "javascript", "sql"],
+    "programming": ["python", "C#", "C++", "GoLang", "async programming"],
     "web-development": ["frontend", "backend", "html", "css", "javascript", "web-development"],
-    "databases": ["databases", "sql"],
-    "data-science": ["data-science", "machine-learning", "python"],
-    "devops": ["devops", "cloud-computing"],
-    "other": ["cybersecurity", "mobile-development", "game-development"]
+    "databases": ["databases", "sql", "postgreSQL"],
+    "data-science": ["data-science", "machine-learning", "NLP", "computer vision"],
+    "devops": ["devops", "cloud-computing", "CI/CD", "Docker"],
+    "cybersecurity": ["backend", "mobile-development", "anti-cheats", "software architecture"],
+    "software architecture": ["OOP", "functional programming", "procedural programming"],
+    "testing": ["auto-tests", "manual testing", "integration tests", "load test"],
 }
 
 difficulties = ["beginner", "intermediate", "advanced"]
@@ -27,11 +23,7 @@ difficulties = ["beginner", "intermediate", "advanced"]
 
 def get_logical_tags(category, num_tags):
     primary_tags = tag_categories[category]
-    other_tags = [tag for tags in tag_categories.values() for tag in tags if tag not in primary_tags]
     tags = random.sample(primary_tags, min(len(primary_tags), num_tags))
-    if len(tags) < num_tags:
-        additional_tags = random.sample(other_tags, num_tags - len(tags))
-        tags.extend(additional_tags)
     if category == "databases" and "sql" not in tags:
         tags.append("sql")
     if category == "web-development" and "html" not in tags and random.random() < 0.5:
@@ -39,10 +31,10 @@ def get_logical_tags(category, num_tags):
     return tags
 
 
-def generate_course_name(primary_tag, difficulty):
-    tag_name = primary_tag.replace("-", " ").title()
+def generate_course_name(category, difficulty):
+    category_name = category.replace("-", " ").title()
     difficulty_name = difficulty.title()
-    return f"{tag_name} for {difficulty_name}"
+    return f"{category_name} for {difficulty_name}"
 
 
 def generate_courses(num_courses):
@@ -62,8 +54,7 @@ def generate_courses(num_courses):
 
             if combination not in seen_combinations:
                 seen_combinations.add(combination)
-                primary_tag = tag_categories[category][0]  # Первый тег из категории как основной
-                course_name = generate_course_name(primary_tag, difficulty)
+                course_name = generate_course_name(category, difficulty)
                 courses.append({
                     "id": i,
                     "name": course_name,
@@ -78,9 +69,14 @@ def generate_courses(num_courses):
     return courses
 
 
+# Генерация курсов
 num_courses = 150
 courses = generate_courses(num_courses)
 
+# Список всех возможных тегов
+possible_tags = [tag for tags in tag_categories.values() for tag in tags]
+
+# Генерация пользователей
 num_users = 200
 users = []
 for user_id in range(1, num_users + 1):
@@ -88,25 +84,106 @@ for user_id in range(1, num_users + 1):
     interests = random.sample(possible_tags, num_interests)
     users.append({"id": f"user{user_id}", "interests": interests})
 
+# Генерация взаимодействий с учетом сложности и успеваемости
 user_courses = []
 for user in users:
     user_id = user["id"]
     interests = set(user["interests"])
     num_interactions = random.randint(5, 10)
-    selected_courses = random.sample(courses, min(num_interactions, len(courses)))
-    for course in selected_courses:
+
+    # Группируем курсы по категориям для проверки зависимостей сложности
+    courses_by_category = {}
+    for category in tag_categories:
+        courses_by_category[category] = [
+            course for course in courses
+            if any(tag in tag_categories[category] for tag in course["tags"])
+        ]
+
+    selected_courses = []
+    for _ in range(num_interactions):
+        # Выбираем категорию, связанную с интересами пользователя
+        relevant_categories = [
+            cat for cat in tag_categories
+            if any(tag in interests for tag in tag_categories[cat])
+        ]
+        if not relevant_categories:
+            relevant_categories = list(tag_categories.keys())
+        category = random.choice(relevant_categories)
+
+        # Проверяем, какие курсы пользователь может пройти в этой категории
+        available_courses = []
+        beginner_courses = [
+            c for c in courses_by_category[category] if c["difficulty"] == "beginner"
+        ]
+        intermediate_courses = [
+            c for c in courses_by_category[category] if c["difficulty"] == "intermediate"
+        ]
+        advanced_courses = [
+            c for c in courses_by_category[category] if c["difficulty"] == "advanced"
+        ]
+
+        # Проверяем завершенные курсы и их успеваемость
+        user_completed_courses = [
+            uc for uc in user_courses
+            if uc["user_id"] == user_id and uc["completed"]
+        ]
+        completed_beginner = any(
+            uc["course_id"] in [c["id"] for c in beginner_courses]
+            and uc["performance"] >= 60
+            for uc in user_completed_courses
+        )
+        completed_intermediate = any(
+            uc["course_id"] in [c["id"] for c in intermediate_courses]
+            and uc["performance"] >= 60
+            for uc in user_completed_courses
+        )
+
+        # Логика доступности курсов
+        if beginner_courses:
+            available_courses.extend(beginner_courses)
+        if completed_beginner:
+            available_courses.extend(intermediate_courses)
+        if completed_beginner and random.random() < 0.5:  # Увеличен шанс для intermediate до 50%
+            available_courses.extend(intermediate_courses)
+        if completed_beginner and completed_intermediate:
+            available_courses.extend(advanced_courses)
+
+        if not available_courses:
+            available_courses = beginner_courses
+
+        # Выбираем курс из доступных, исключая уже выбранные
+        available_courses = [c for c in available_courses if c["id"] not in [sc["id"] for sc in selected_courses]]
+        if not available_courses:
+            continue
+        course = random.choice(available_courses)
+        selected_courses.append(course)
+
         course_tags = set(course["tags"])
         common_tags = course_tags.intersection(interests)
-        completion_prob = 0.8 if common_tags else 0.3
+        completion_prob = 0.9 if common_tags else 0.5  # Увеличена вероятность завершения
         completed = random.random() < completion_prob
-        score = random.randint(3, 5) if completed and common_tags else random.randint(1, 3) if completed else 0
+
+        # Генерация успеваемости и оценки
+        if completed:
+            if common_tags:
+                performance = random.randint(70, 100)  # Увеличены минимальные значения
+                score = random.randint(4, 5)  # Увеличен шанс высоких оценок
+            else:
+                performance = random.randint(50, 90)
+                score = random.randint(2, 4)
+        else:
+            performance = 0
+            score = 0
+
         user_courses.append({
             "user_id": user_id,
             "course_id": course["id"],
             "completed": completed,
-            "score": score
+            "score": score,
+            "performance": performance
         })
 
+# Сохранение данных
 with open(Path(COURSES_PATH), "w", encoding="utf-8") as f:
     json.dump(courses, f, ensure_ascii=False, indent=2)
 
@@ -116,6 +193,7 @@ with open(Path(USERS_PATH), "w", encoding="utf-8") as f:
 with open(Path(USER_COURSES_PATH), "w", encoding="utf-8") as f:
     json.dump(user_courses, f, ensure_ascii=False, indent=2)
 
+# Проверка результатов
 df_courses = pd.DataFrame(courses)
 df_users = pd.DataFrame(users)
 df_user_courses = pd.DataFrame(user_courses)

@@ -30,7 +30,8 @@ def recommend_courses_for_user(user_id: str, top_k: int = 5):
             'id': cid,
             'name': course_dict[cid]['name'],
             'difficulty': course_dict[cid]['difficulty'],
-            'tags': course_dict[cid]['tags']
+            'tags': course_dict[cid]['tags'],
+            'predicted_score': float(predictions[course_ids.index(cid)])
         }
         for cid in top_courses_ids if cid in course_dict
     ]

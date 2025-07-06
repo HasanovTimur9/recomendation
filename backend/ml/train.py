@@ -7,9 +7,11 @@ import os
 
 MODELS_PATH = "C:/Users/Hasan/OneDrive/Рабочий стол/recomendation/recomendation/backend/ml/models"
 
-courses = data_store.courses
-users = data_store.users
-user_courses = data_store.user_courses
+courses, users, user_courses = file_manager.load_raw_data()
+
+#courses = data_store.courses
+#users = data_store.users
+#user_courses = data_store.user_courses
 
 model_dir = MODELS_PATH
 os.makedirs(model_dir, exist_ok=True)
