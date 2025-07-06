@@ -13,6 +13,7 @@
           {{ tag }}<span v-if="idx < course.tags.length - 1">, </span>
         </span>
       </p>
+      <p class="text-sm text-gray-600">Оценка за курс: {{ course.performance }}</p>
 
       <div class="mt-2">
         <slot :course="course" />
@@ -28,12 +29,10 @@ defineProps<{
     name: string
     difficulty: string
     tags: string[]
+    performance: number
   }[]
 }>()
 </script>
 
 <style scoped>
-.course-card {
-  @apply bg-white p-4 rounded-2xl shadow-md mb-4;
-}
 </style>

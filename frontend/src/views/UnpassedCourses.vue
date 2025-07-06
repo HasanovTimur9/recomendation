@@ -35,13 +35,16 @@ onMounted(async () => {
 })
 
 async function markAsPassed(course: Course) {
-  const raw = prompt(`Введите вашу оценку курсу "${course.name}" (от 0 до 5):`)
+  const raw = prompt(`Введите вашу оценку, по итогу прохождения курса "${course.name}" (от 0 до 5):`)
   const score = Number(raw)
+  const raw2 = prompt(`Введите вашу оценку курсу "${course.name}", на сколько вам понравилось и было полезно (от 0 до 5):`)
+  const performance = Number(raw2)
 
   let result = await api.post('/user_courses', {
     user_id: userId,
     course_id: course.id,
-    score: score
+    score: score,
+    performance: performance
   })
   courses.value = courses.value.filter(c => c.id !== course.id)
   alert(result.data.message)
